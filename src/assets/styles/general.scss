@@ -1,9 +1,13 @@
 @import "./src/assets/styles/utilities/variables";
 
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
@@ -16,8 +20,11 @@ html, body {
   border-radius: 10px;
   background: $color-stroke;
 
+  &:active {
+    background: darken($color-stroke, 5%);
+  }
   &:window-inactive {
-    background: lighten($color-stroke, 10%);
+    background: lighten($color-stroke, 5%);
   }
 }
 

@@ -6,9 +6,65 @@
   height: 100%;
   text-align: center;
   background: linear-gradient(-30deg, $color-primary, $color-secondary);
+  @include card-shadow;
 
   .home-splash__content {
     @include vertical-center-content;
+    top: -100px;
   }
 }
 
+.offset-blurb {
+  position: relative;
+  top: -200px;
+  width: 80%;
+  max-width: 900px;
+  min-height: 600px;
+  margin: 0 auto -200px;
+  background: $neutral-lt;
+  @include card-shadow;
+}
+
+.col-container {
+  display: flex;
+  flex-direction: column;
+  margin: 120px 0;
+
+  @media screen and (min-width: $screen-sm){
+    flex-direction: row;
+  }
+
+  .col-container__item {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+.portfolio {
+  text-align: center;
+
+  .portfolio__item {
+    display: inline-block;
+    width: 30%;
+    height: 150px;
+    background: $neutral-md;
+
+    &:nth-of-type(even) {
+      background: $neutral-lt;
+    }
+  }
+}
+
+.testimonial {
+  margin: 120px 0;
+  padding: 80px 0;
+
+  .testimonial__content {
+    text-align: center;
+  }
+}
+
+.footer {
+  min-height: 200px;
+  background: $neutral-md;
+}
