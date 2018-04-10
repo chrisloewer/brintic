@@ -1,0 +1,18 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.border-frame {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: $primary-lt;
+
+  .border-frame__content {
+    position: relative;
+    height: calc(100% - 80px); // subtract double the margin
+    margin: 40px;
+    background: $color-secondary;
+    @include card-shadow-mixin();
+  }
+}

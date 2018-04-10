@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
-import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import {RouterModule, Routes} from '@angular/router';
 import { PageControlComponent } from './components/page-control/page-control.component';
@@ -14,7 +12,6 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
     HomePageComponent,
     PageControlComponent
   ],
