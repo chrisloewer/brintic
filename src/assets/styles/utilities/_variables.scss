@@ -1,9 +1,12 @@
 
 // Colors
-$primary-lt: #EEEEEE;
-$primary-md: #D1D1D1;
-$primary-dk: #AAAAAA;
+$neutral-lt: #EEEEEE;
+$neutral-md: #D1D1D1;
+$neutral-dk: #878787;
+
+$off-black: transparentize(#1A1A1A, 0.05);
 
 $color-primary: #BE93C5;
 $color-secondary: #7BC6CC;
 $color-shaded: #D1D1D1;
+$color-stroke: #878787;
