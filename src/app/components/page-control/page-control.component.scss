@@ -12,7 +12,8 @@
     position: relative;
     height: calc(100% - 80px); // subtract double the margin
     margin: 40px;
-    background: $color-secondary;
+    overflow-y: auto;
+    background: #ffffff;
     @include card-shadow-mixin();
   }
 }

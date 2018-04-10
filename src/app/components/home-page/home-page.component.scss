@@ -1,0 +1,14 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.home-splash {
+  @include vertical-center-container;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(-30deg, $color-primary, $color-secondary);
+
+  .home-splash__content {
+    @include vertical-center-content;
+  }
+}
+
