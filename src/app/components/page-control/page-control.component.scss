@@ -1,6 +1,9 @@
 @import "./src/assets/styles/utilities/variables";
 @import "./src/assets/styles/utilities/mixins";
 
+$frame-top-size: 60px;
+$frame-bottom-size: 40px;
+
 .border-frame {
   position: relative;
   width: 100vw;
@@ -8,12 +11,52 @@
   overflow: hidden;
   background: $neutral-lt;
 
+  .border-frame__nav {
+    height: $frame-top-size;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      margin: 0 20px;
+      height: 30px;
+      width: 120px;
+      background: url("/assets/images/brintic-logo-bold-full.svg") no-repeat center center;
+      background-size: contain;
+    }
+
+    .links {
+      margin: 0 20px;
+
+      a {
+        margin: 0 20px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
   .border-frame__content {
     position: relative;
-    height: calc(100% - 80px); // subtract double the margin
-    margin: 40px;
+    height: calc(100% - #{$frame-top-size} - #{$frame-bottom-size}); // subtract the margins
+    margin: 0 25px;
     overflow-y: auto;
     background: #ffffff;
     @include card-shadow();
+  }
+
+  .border-frame__footer {
+    height: $frame-bottom-size;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .copyright {
+      margin: 0 20px;
+      font-size: 12px;
+      font-weight: 300;
+    }
   }
 }

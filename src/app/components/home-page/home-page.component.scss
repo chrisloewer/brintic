@@ -5,12 +5,17 @@
   @include vertical-center-container;
   height: 100%;
   text-align: center;
-  background: linear-gradient(-30deg, $color-primary, $color-secondary);
+  background: linear-gradient(-14deg, $color-primary, $color-secondary);
   @include card-shadow;
 
   .home-splash__content {
     @include vertical-center-content;
     top: -100px;
+
+    .logo {
+      max-width: 100%;
+      padding: 0 15px;
+    }
   }
 }
 
@@ -21,7 +26,9 @@
   max-width: 900px;
   min-height: 600px;
   margin: 0 auto -200px;
-  background: $neutral-lt;
+  padding: 20px;
+  background: $color-secondary;
+  background: linear-gradient(to top, $color-secondary, lighten($color-secondary, 5%));
   @include card-shadow;
 }
 
