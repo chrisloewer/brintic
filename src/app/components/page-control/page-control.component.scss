@@ -27,12 +27,35 @@ $frame-bottom-size: 40px;
 
     .links {
       margin: 0 20px;
+      overflow: visible;
 
       a {
+        position: relative;
+        text-decoration: none;
         margin: 0 20px;
+        z-index: 2;
 
         &:last-of-type {
           margin-right: 0;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: -6px;
+          left: -8px;
+          width: 0;
+          height: 15px;
+          background: transparentize($color-primary, 0.5);
+          z-index: -1;
+          transition: all 0.2s;
+        }
+
+        &:hover {
+          &:before {
+            width: calc(100% + 20px);
+            transition: all 0.4s;
+          }
         }
       }
     }
