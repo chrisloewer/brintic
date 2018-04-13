@@ -15,7 +15,14 @@ html, body {
 
 h1 {
   font-weight: 400;
-  font-size: 48px;
+  font-size: 26px;
+
+  @media screen and (min-width: $screen-sm){
+    font-size: 32px;
+  }
+  @media screen and (min-width: $screen-md){
+    font-size: 48px;
+  }
 }
 h2 {
   font-weight: 300;

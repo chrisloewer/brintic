@@ -63,19 +63,28 @@ $frame-bottom-size: 40px;
 
   .border-frame__content {
     position: relative;
-    height: calc(100% - #{$frame-top-size} - #{$frame-bottom-size}); // subtract the margins
-    margin: 0 25px;
+    height: calc(100% - #{$frame-top-size}); // subtract the margins (no footer on small viewport)
+    margin: 0;
     overflow-y: auto;
     background: #ffffff;
     @include card-shadow();
     perspective: 5px;
+
+    @media screen and (min-width: $screen-sm){
+      margin: 0 25px;
+      height: calc(100% - #{$frame-top-size} - #{$frame-bottom-size}); // subtract the margins
+    }
   }
 
   .border-frame__footer {
-    height: $frame-bottom-size;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: none;
+
+    @media screen and (min-width: $screen-sm){
+      height: $frame-bottom-size;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     .copyright {
       margin: 0 20px;

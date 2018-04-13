@@ -2,8 +2,15 @@
 @import "./src/assets/styles/utilities/mixins";
 
 p {
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.5em;
+
+  @media screen and (min-width: $screen-sm){
+    font-size: 14px;
+  }
+  @media screen and (min-width: $screen-md){
+    font-size: 18px;
+  }
 }
 
 .home-splash {
@@ -35,28 +42,43 @@ p {
   top: -155px;
   width: 80%;
   max-width: 900px;
-  min-height: 600px;
   margin: 0 auto -155px;
-  padding: 60px 20px;
+  padding: 40px 30px;
   background: $color-secondary;
   background: linear-gradient(to top, lighten($color-secondary, 5%), lighten($color-secondary, 10%));
   @include card-shadow;
 
+  @media screen and (min-width: $screen-sm) {
+    padding: 60px 20px;
+  }
+
   .offset-blurb__content {
+
     :first-child {
       margin-top: 0;
     }
 
     .container {
-      max-width: 70%;
-      margin: 0 auto;
+      text-align: left;
+
+      @media screen and (min-width: $screen-sm) {
+        max-width: 70%;
+        margin: 0 auto;
+      }
 
       .demo {
         background: $color-highlight-dk;
-        padding: 150px 200px;
+        padding: 80px 0;
+        text-align: center;
+
+        @media screen and (min-width: $screen-md) {
+          padding: 150px;
+        }
 
         .demo__link {
+          max-width: 180px;
           padding: 20px 30px;
+          margin: 0 auto;
           border: 1px solid $color-primary;
           border-radius: 50px;
           color: $color-primary;
@@ -78,9 +100,13 @@ p {
 .spotlight {
   display: flex;
   overflow: visible;
-  margin: 200px 0;
+  margin: 100px 0;
 
-  .spotlight__item {
+  @media screen and (min-width: $screen-sm) {
+    margin: 200px 0;
+  }
+
+    .spotlight__item {
     width: 0;
     flex-grow: 2;
     flex-shrink: 1;
@@ -92,17 +118,35 @@ p {
     flex-grow: 3;
     @include vertical-center-container;
     text-align: center;
-    margin-right: 100px;
+    z-index: 3;
+
+    @media screen and (min-width: $screen-sm) {
+      margin-right: 50px;
+    }
+    @media screen and (min-width: $screen-md) {
+      margin-right: 100px;
+    }
+
 
     .text--content {
       @include vertical-center-content;
-      max-width: 70%;
+      max-width: 80%;
       text-align: left;
+
+      @media screen and (min-width: $screen-sm) {
+        max-width: 70%;
+      }
     }
 
     &:nth-of-type(even) {
       margin-right: unset;
-      margin-left: 100px;
+
+      @media screen and (min-width: $screen-sm) {
+        margin-left: 50px;
+      }
+      @media screen and (min-width: $screen-md) {
+        margin-left: 100px;
+      }
     }
   }
 
@@ -113,12 +157,19 @@ p {
 
     .graphic--offset {
       @include vertical-center-content;
-      left: -150px;
+      left: -70px;
       width: 400px;
       height: 200px;
       background: $color-secondary;
       transform: translateZ(1px);
       @include card-shadow;
+
+      @media screen and (min-width: $screen-sm) {
+        left: -100px;
+      }
+      @media screen and (min-width: $screen-md) {
+        left: -150px;
+      }
     }
 
     &:nth-of-type(odd) {
@@ -126,7 +177,14 @@ p {
 
       .graphic--offset {
         left: unset;
-        right: -150px;
+        right: -70px;
+
+        @media screen and (min-width: $screen-sm) {
+          right: -100px;
+        }
+        @media screen and (min-width: $screen-md) {
+          right: -150px;
+        }
       }
     }
   }
@@ -137,23 +195,32 @@ p {
   flex-direction: column;
   margin: 120px 0;
 
-  @media screen and (min-width: $screen-sm){
+  @media screen and (min-width: $screen-md){
     flex-direction: row;
   }
 
   .col-container__item {
-    width: 0;
     flex-grow: 1;
     text-align: center;
     padding: 20px;
-    margin: 40px;
+    margin: 20px 40px;
+
+    @media screen and (min-width: $screen-md){
+      width: 0;
+      margin: 40px;
+    }
 
     .graphic {
       background: $color-highlight-dk;
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       margin: 0 auto 25px;
+
+      @media screen and (min-width: $screen-sm) {
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 }
@@ -163,8 +230,7 @@ p {
   bottom: -50px;
   width: 80%;
   max-width: 900px;
-  min-height: 600px;
-  padding: 60px 20px;
+  padding: 40px 30px;
   margin: -70px auto 0;
   background: $color-primary;
   background: linear-gradient(to top, lighten($color-primary, 5%), lighten($color-primary, 23%));
@@ -176,8 +242,10 @@ p {
     }
 
     .container {
-      max-width: 70%;
-      margin: 0 auto;
+      @media screen and (min-width: $screen-sm) {
+        max-width: 70%;
+        margin: 0 auto;
+      }
     }
   }
 }
