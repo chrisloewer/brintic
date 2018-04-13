@@ -45,6 +45,7 @@ $frame-bottom-size: 40px;
     overflow-y: auto;
     background: #ffffff;
     @include card-shadow();
+    perspective: 10px;
   }
 
   .border-frame__footer {

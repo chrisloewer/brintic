@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HomePageComponent } from './components/home-page/home-page.component';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { PageControlComponent } from './components/page-control/page-control.component';
 
 const appRoutes: Routes = [

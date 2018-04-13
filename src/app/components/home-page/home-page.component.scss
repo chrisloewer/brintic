@@ -1,6 +1,7 @@
 @import "./src/assets/styles/utilities/variables";
 @import "./src/assets/styles/utilities/mixins";
 
+
 .home-splash {
   @include vertical-center-container;
   height: 100%;
@@ -25,11 +26,35 @@
   width: 80%;
   max-width: 900px;
   min-height: 600px;
-  margin: 0 auto -200px;
+  margin: 0 auto -80px;
   padding: 20px;
   background: $color-secondary;
   background: linear-gradient(to top, lighten($color-secondary, 5%), lighten($color-secondary, 10%));
   @include card-shadow;
+}
+
+.spotlight {
+  display: flex;
+  overflow: visible;
+
+  .spotlight__item {
+    width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 500px;
+    overflow: visible;
+  }
+
+  .spotlight__item--graphic {
+    background: $color-highlight;
+
+    .graphic--offset {
+      width: 400px;
+      height: 200px;
+      background: $color-secondary;
+      transform: translateZ(1px);
+    }
+  }
 }
 
 .col-container {
