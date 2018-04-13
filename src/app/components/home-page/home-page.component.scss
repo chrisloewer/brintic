@@ -28,7 +28,7 @@
   margin: 0 auto -200px;
   padding: 20px;
   background: $color-secondary;
-  background: linear-gradient(to top, $color-secondary, lighten($color-secondary, 5%));
+  background: linear-gradient(to top, lighten($color-secondary, 5%), lighten($color-secondary, 10%));
   @include card-shadow;
 }
 
