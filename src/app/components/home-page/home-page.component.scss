@@ -142,6 +142,7 @@ p {
   }
 
   .col-container__item {
+    width: 0;
     flex-grow: 1;
     text-align: center;
     padding: 20px;
@@ -157,31 +158,46 @@ p {
   }
 }
 
-.portfolio {
-  text-align: center;
+.open-source {
+  position: relative;
+  bottom: -50px;
+  width: 80%;
+  max-width: 900px;
+  min-height: 600px;
+  padding: 60px 20px;
+  margin: -70px auto 0;
+  background: $color-primary;
+  background: linear-gradient(to top, lighten($color-primary, 5%), lighten($color-primary, 23%));
+  @include card-shadow;
 
-  .portfolio__item {
-    display: inline-block;
-    width: 30%;
-    height: 150px;
-    background: $neutral-md;
-
-    &:nth-of-type(even) {
-      background: $neutral-lt;
+  .open-source__content {
+    :first-child {
+      margin-top: 0;
     }
-  }
-}
 
-.testimonial {
-  margin: 120px 0;
-  padding: 80px 0;
-
-  .testimonial__content {
-    text-align: center;
+    .container {
+      max-width: 70%;
+      margin: 0 auto;
+    }
   }
 }
 
 .footer {
   min-height: 200px;
+  padding-top: 100px;
   background: $color-highlight;
+  text-align: center;
+
+  .footer__col--links {
+    margin: 20px 0;
+  }
+
+  a {
+    color: $color-highlight-dk;
+    margin: 20px;
+  }
+
+  .button--action {
+    display: inline-block;
+  }
 }

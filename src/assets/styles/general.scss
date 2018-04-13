@@ -1,6 +1,6 @@
 @import "./src/assets/styles/utilities/variables";
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700,800,900');
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@ html, body {
 }
 
 h1 {
-  font-weight: 200;
+  font-weight: 400;
   font-size: 48px;
 }
 h2 {
@@ -54,6 +54,32 @@ h3.highlight {
 
 .center-text {
   text-align: center;
+}
+
+.button--action {
+  padding: 20px 30px;
+  border: 1px solid $color-primary;
+  border-radius: 50px;
+  color: $color-primary;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $color-primary;
+    border: 1px solid $color-highlight-dk;
+    color: $color-highlight-dk;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  &.dark {
+    border: 1px solid $color-highlight-dk;
+    color: $color-highlight-dk;
+
+    &:hover {
+      background: $color-highlight-dk;
+      color: #ffffff;
+    }
+  }
 }
 
 ::-webkit-scrollbar {
