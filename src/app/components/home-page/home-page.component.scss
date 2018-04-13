@@ -32,18 +32,17 @@ p {
 
 .offset-blurb {
   position: relative;
-  top: -200px;
+  top: -155px;
   width: 80%;
   max-width: 900px;
   min-height: 600px;
-  margin: 0 auto -200px;
+  margin: 0 auto -155px;
   padding: 60px 20px;
   background: $color-secondary;
   background: linear-gradient(to top, lighten($color-secondary, 5%), lighten($color-secondary, 10%));
   @include card-shadow;
 
   .offset-blurb__content {
-
     :first-child {
       margin-top: 0;
     }
@@ -61,12 +60,14 @@ p {
           border: 1px solid $color-primary;
           border-radius: 50px;
           color: $color-primary;
+          transition: all 0.2s;
 
           &:hover {
             background: $color-primary;
             border: 1px solid $color-highlight-dk;
             color: $color-highlight-dk;
             cursor: pointer;
+            transition: all 0.2s;
           }
         }
       }

@@ -20,6 +20,9 @@ h1 {
 h2 {
   font-weight: 300;
 }
+h3 {
+  font-size: 28px;
+}
 
 a {
   color: $color-highlight;
@@ -28,6 +31,24 @@ a {
   }
   &:active {
     color: darken($color-highlight, 15%);
+  }
+}
+
+h3.highlight {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -12px;
+    left: 12px;
+    width: calc(100% + 30px);
+    height: 30px;
+    background: transparentize($color-primary, 0.3);
+    z-index: -1;
   }
 }
 
