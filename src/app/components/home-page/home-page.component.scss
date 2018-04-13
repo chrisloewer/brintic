@@ -26,7 +26,7 @@
   width: 80%;
   max-width: 900px;
   min-height: 600px;
-  margin: 0 auto -80px;
+  margin: 0 auto -200px;
   padding: 20px;
   background: $color-secondary;
   background: linear-gradient(to top, lighten($color-secondary, 5%), lighten($color-secondary, 10%));
@@ -36,23 +36,56 @@
 .spotlight {
   display: flex;
   overflow: visible;
+  margin: 200px 0;
 
   .spotlight__item {
-    width: 50%;
-    flex-grow: 1;
+    width: 0;
+    flex-grow: 2;
     flex-shrink: 1;
     height: 500px;
     overflow: visible;
   }
 
+  .spotlight__item--text {
+    flex-grow: 3;
+    @include vertical-center-container;
+    text-align: center;
+    margin-right: 100px;
+
+    .text--content {
+      @include vertical-center-content;
+      max-width: 70%;
+      text-align: left;
+    }
+
+    &:nth-of-type(even) {
+      margin-right: unset;
+      margin-left: 100px;
+    }
+  }
+
   .spotlight__item--graphic {
+    @include vertical-center-container;
     background: $color-highlight;
+    @include card-shadow;
 
     .graphic--offset {
+      @include vertical-center-content;
+      left: -150px;
       width: 400px;
       height: 200px;
       background: $color-secondary;
       transform: translateZ(1px);
+      @include card-shadow;
+    }
+
+    &:nth-of-type(odd) {
+      text-align: right;
+
+      .graphic--offset {
+        left: unset;
+        right: -150px;
+      }
     }
   }
 }
