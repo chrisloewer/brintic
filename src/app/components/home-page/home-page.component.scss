@@ -240,7 +240,7 @@ p {
   }
 }
 
-.open-source {
+.get-started {
   position: relative;
   bottom: -50px;
   width: 80%;
@@ -251,7 +251,7 @@ p {
   background: linear-gradient(to top, lighten($color-primary, 5%), lighten($color-primary, 23%));
   @include card-shadow;
 
-  .open-source__content {
+  .get-started__content {
     :first-child {
       margin-top: 0;
     }

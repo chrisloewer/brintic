@@ -16,7 +16,6 @@ export class PageControlComponent implements OnInit {
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
-    console.log(this.menuOpen);
   }
 
 }

@@ -65,8 +65,8 @@ $frame-bottom-size: 40px;
 
   .border-frame__nav {
 
+    // Dropdown nav menu on mobile viewport
     @media screen and (max-width: $screen-sm - 1) {
-      // Dropdown menu on mobile viewport
       height: 0;
       text-align: center;
       overflow: hidden;
@@ -94,9 +94,8 @@ $frame-bottom-size: 40px;
       }
     }
 
+    // Top level nav menu on larger viewports
     @media screen and (min-width: $screen-sm) {
-
-      // Top nav menu on larger viewports
       height: $frame-top-size;
       display: flex;
       align-items: center;
