@@ -130,7 +130,7 @@ $frame-bottom-size: 40px;
             left: -8px;
             width: 0;
             height: 15px;
-            background: transparentize($color-primary, 0.5);
+            background: transparentize($color-secondary, 0.5);
             z-index: -1;
             transition: all 0.2s;
           }

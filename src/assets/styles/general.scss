@@ -54,7 +54,7 @@ h3.highlight {
     left: 12px;
     width: calc(100% + 30px);
     height: 30px;
-    background: transparentize($color-primary, 0.3);
+    background: transparentize($color-tertiary, 0.3);
     z-index: -1;
   }
 }
@@ -65,15 +65,15 @@ h3.highlight {
 
 .button--action {
   padding: 20px 30px;
-  border: 1px solid $color-primary;
+  border: 1px solid $color-tertiary;
   border-radius: 50px;
-  color: $color-primary;
+  color: $color-tertiary;
   transition: all 0.2s;
 
   &:hover {
-    background: $color-primary;
-    border: 1px solid $color-highlight-dk;
-    color: $color-highlight-dk;
+    background: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    color: $color-primary;
     cursor: pointer;
     transition: all 0.2s;
   }
