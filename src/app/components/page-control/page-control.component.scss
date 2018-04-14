@@ -11,50 +11,136 @@ $frame-bottom-size: 40px;
   overflow: hidden;
   background: $neutral-lt;
 
-  .border-frame__nav {
-    height: $frame-top-size;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .menu-icon {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    right: 20px;
+    background: $color-highlight-dk;
+    border-radius: 50%;
+    z-index: 10;
+    @include card-shadow;
 
-    .logo {
-      margin: 0 20px;
-      height: 30px;
-      width: 120px;
-      background: url("/assets/images/brintic-logo-bold-full.svg") no-repeat center center;
-      background-size: contain;
-    }
+    .hamburger-icon {
+      display: inline-block;
+      padding: 12px 15px;
+      cursor: pointer;
+      transition: all 0.2s;
 
-    .links {
-      margin: 0 20px;
-      overflow: visible;
-
-      a {
+      span {
+        display: block;
         position: relative;
-        text-decoration: none;
-        margin: 0 20px;
-        z-index: 2;
+        height: 3px;
+        width: 30px;
+        background-color: #ffffff;
+        margin: 7px 0;
+        transform-origin: left center;
+        transition: all 0.2s;
+      }
 
-        &:last-of-type {
-          margin-right: 0;
-        }
+      &.open {
+        transform: translateX(3px);
+        transition: all 0.2s;
 
-        &:before {
-          content: '';
-          position: absolute;
-          bottom: -6px;
-          left: -8px;
-          width: 0;
-          height: 15px;
-          background: transparentize($color-primary, 0.5);
-          z-index: -1;
+        span {
           transition: all 0.2s;
         }
+        span:nth-child(1) {
+          transform: rotate(41deg);
+        }
+        span:nth-child(2) {
+          opacity: 0;
+        }
+        span:nth-child(3) {
+          transform: rotate(-41deg);
+        }
+      }
+    }
 
-        &:hover {
+    @media screen and (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  .border-frame__nav {
+
+    @media screen and (max-width: $screen-sm - 1) {
+      // Dropdown menu on mobile viewport
+      height: 0;
+      text-align: center;
+      overflow: hidden;
+      transition: all 0.2s;
+
+      .logo {
+        margin: 0 auto 30px;
+        height: 30px;
+        width: 120px;
+        background: url("/assets/images/brintic-logo-bold-full.svg") no-repeat center center;
+        background-size: contain;
+      }
+
+      .links {
+        a {
+          display: block;
+          padding: 20px;
+        }
+      }
+
+      &.menu--open {
+        height: 100%;
+        padding: 60px 0;
+        transition: all 0.2s;
+      }
+    }
+
+    @media screen and (min-width: $screen-sm) {
+
+      // Top nav menu on larger viewports
+      height: $frame-top-size;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        margin: 0 20px;
+        height: 30px;
+        width: 120px;
+        background: url("/assets/images/brintic-logo-bold-full.svg") no-repeat center center;
+        background-size: contain;
+      }
+
+      .links {
+        margin: 0 20px;
+        overflow: visible;
+
+        a {
+          position: relative;
+          text-decoration: none;
+          margin: 0 20px;
+          z-index: 2;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
           &:before {
-            width: calc(100% + 20px);
-            transition: all 0.4s;
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: -8px;
+            width: 0;
+            height: 15px;
+            background: transparentize($color-primary, 0.5);
+            z-index: -1;
+            transition: all 0.2s;
+          }
+
+          &:hover {
+            &:before {
+              width: calc(100% + 20px);
+              transition: all 0.4s;
+            }
           }
         }
       }
@@ -63,7 +149,7 @@ $frame-bottom-size: 40px;
 
   .border-frame__content {
     position: relative;
-    height: calc(100% - #{$frame-top-size}); // subtract the margins (no footer on small viewport)
+    height: 100%;
     margin: 0;
     overflow-y: auto;
     background: #ffffff;

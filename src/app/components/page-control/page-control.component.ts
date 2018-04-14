@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageControlComponent implements OnInit {
 
+  menuOpen = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+    console.log(this.menuOpen);
   }
 
 }

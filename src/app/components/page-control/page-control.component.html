@@ -1,6 +1,13 @@
 
 <div class="border-frame">
-  <div class="border-frame__nav">
+  <div class="menu-icon" (click)="toggleMenu()">
+    <div class="hamburger-icon" [class.open]="menuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="border-frame__nav" [class.menu--open]="menuOpen">
     <div class="logo"></div>
     <div class="links">
       <a href="#">Home</a>
