@@ -154,7 +154,7 @@ $frame-bottom-size: 40px;
     overflow-y: auto;
     background: #ffffff;
     @include card-shadow();
-    perspective: 5px;
+    perspective: 3px;
 
     @media screen and (min-width: $screen-sm){
       margin: 0 25px;

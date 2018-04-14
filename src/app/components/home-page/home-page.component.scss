@@ -59,8 +59,7 @@ p {
   max-width: 900px;
   margin: 0 auto -155px;
   padding: 40px 30px;
-  background: $color-secondary;
-  background: linear-gradient(to top, $color-tertiary, lighten($color-tertiary, 5%) );
+  background: $color-tertiary;
   @include card-shadow;
 
   @media screen and (min-width: $screen-sm) {
@@ -84,6 +83,7 @@ p {
       .demo {
         background: $color-highlight-dk;
         padding: 80px 0;
+        margin: 20px;
         text-align: center;
 
         @media screen and (min-width: $screen-md) {
@@ -176,18 +176,15 @@ p {
 
       .graphic--offset {
         @include vertical-center-content;
-        left: -70px;
-        width: 400px;
-        height: 200px;
+        left: -150px;
+        width: 300px;
+        height: 150px;
         background: $color-secondary;
         transform: translateZ(1px);
         @include card-shadow;
 
-        @media screen and (min-width: $screen-sm) {
-          left: -100px;
-        }
         @media screen and (min-width: $screen-md) {
-          left: -150px;
+          left: -200px;
         }
       }
 
@@ -196,13 +193,10 @@ p {
 
         .graphic--offset {
           left: unset;
-          right: -70px;
+          right: -150px;
 
-          @media screen and (min-width: $screen-sm) {
-            right: -100px;
-          }
           @media screen and (min-width: $screen-md) {
-            right: -150px;
+            right: -200px;
           }
         }
       }
@@ -252,7 +246,7 @@ p {
   max-width: 900px;
   padding: 40px 30px;
   margin: -70px auto 0;
-  background: $color-primary;
+  background: $color-secondary;
   background: linear-gradient(to top, $color-secondary, lighten($color-secondary, 10%));
   @include card-shadow;
 
