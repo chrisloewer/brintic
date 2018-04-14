@@ -55,7 +55,7 @@ p {
 .offset-blurb {
   position: relative;
   top: -155px;
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   margin: 0 auto -155px;
   padding: 40px 30px;
@@ -120,11 +120,11 @@ p {
     margin: 200px 0;
   }
 
-    .spotlight__item {
+  .spotlight__item {
     width: 0;
     flex-grow: 2;
     flex-shrink: 1;
-    height: 500px;
+    // height: 500px;
     overflow: visible;
   }
 
@@ -165,39 +165,45 @@ p {
   }
 
   .spotlight__item--graphic {
-    @include vertical-center-container;
-    background: $color-highlight;
-    @include card-shadow;
+    display: none;
 
-    .graphic--offset {
-      @include vertical-center-content;
-      left: -70px;
-      width: 400px;
-      height: 200px;
-      background: $color-secondary;
-      transform: translateZ(1px);
+    @media screen and (min-width: $screen-sm) {
+      display: block;
+      height: 500px;
+      @include vertical-center-container;
+      background: $color-highlight;
       @include card-shadow;
 
-      @media screen and (min-width: $screen-sm) {
-        left: -100px;
-      }
-      @media screen and (min-width: $screen-md) {
-        left: -150px;
-      }
-    }
-
-    &:nth-of-type(odd) {
-      text-align: right;
-
       .graphic--offset {
-        left: unset;
-        right: -70px;
+        @include vertical-center-content;
+        left: -70px;
+        width: 400px;
+        height: 200px;
+        background: $color-secondary;
+        transform: translateZ(1px);
+        @include card-shadow;
 
         @media screen and (min-width: $screen-sm) {
-          right: -100px;
+          left: -100px;
         }
         @media screen and (min-width: $screen-md) {
-          right: -150px;
+          left: -150px;
+        }
+      }
+
+      &:nth-of-type(odd) {
+        text-align: right;
+
+        .graphic--offset {
+          left: unset;
+          right: -70px;
+
+          @media screen and (min-width: $screen-sm) {
+            right: -100px;
+          }
+          @media screen and (min-width: $screen-md) {
+            right: -150px;
+          }
         }
       }
     }
@@ -242,7 +248,7 @@ p {
 .get-started {
   position: relative;
   bottom: -50px;
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   padding: 40px 30px;
   margin: -70px auto 0;

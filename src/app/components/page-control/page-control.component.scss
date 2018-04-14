@@ -69,6 +69,7 @@ $frame-bottom-size: 40px;
     @media screen and (max-width: $screen-sm - 1) {
       height: 0;
       text-align: center;
+      background: $color-tertiary;
       overflow: hidden;
       transition: all 0.2s;
 
