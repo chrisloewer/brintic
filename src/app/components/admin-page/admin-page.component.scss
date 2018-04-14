@@ -1,0 +1,19 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.logo {
+  margin: 60px auto 30px;
+  height: 50px;
+  background: url("/assets/images/brintic-logo-bold-full.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.pages {
+  .pages__well {
+    margin: 20px 0;
+    padding: 20px;
+    background: $neutral-lt;
+    border: 1px solid $color-stroke;
+    cursor: pointer;
+  }
+}

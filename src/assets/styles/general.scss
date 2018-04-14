@@ -63,6 +63,19 @@ h3.highlight {
   text-align: center;
 }
 
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container-narrow {
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .button--action {
   padding: 20px 30px;
   border: 1px solid $color-tertiary;
