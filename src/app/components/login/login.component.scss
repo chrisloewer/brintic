@@ -1,0 +1,29 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.logo {
+  margin: 0 auto 30px;
+  height: 50px;
+  background: url("/assets/images/brintic-logo-bold-full.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.login-container {
+  height: 100%;
+  background: $neutral-md;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .login__content {
+    background: #ffffff;
+    width: 400px;
+    padding: 30px;
+    @include card-shadow;
+  }
+}
+

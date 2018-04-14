@@ -58,6 +58,46 @@ h3.highlight {
     z-index: -1;
   }
 }
+textarea {
+  resize: vertical;
+  line-height: 1.5em;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  background: $neutral-lt;
+  border: 1px solid $color-shaded;
+}
+input {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.btn-default {
+  width: unset;
+  padding: 10px 30px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 15px;
+  border: 1px solid $color-primary;
+  color: $color-primary;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-primary;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+}
 
 .center-text {
   text-align: center;
