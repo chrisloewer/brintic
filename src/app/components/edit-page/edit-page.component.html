@@ -1,7 +1,13 @@
 
 <div class="page-editor">
-  <div class="page-editor__section page-editor--edit">
+  <div class="page-editor__section page-editor--edit"  [class.open]="!previewActive">
     <h3 class="center-text">Edit Page</h3>
+
+    <div class="control-buttons">
+      <div class="button--expand" [class.active]="editActive" (click)="toggleEditMode()">
+        <span class="graphic"></span>
+      </div>
+    </div>
 
     <div class="container">
       <label>Title</label>
@@ -9,8 +15,14 @@
     </div>
   </div>
 
-  <div class="page-editor__section page-editor--preview">
-    Preview Section
+  <div class="page-editor__section page-editor--preview" [class.open]="!editActive">
+    <h3 class="center-text">Preview Section</h3>
+
+    <div class="control-buttons">
+      <div class="button--expand" [class.active]="previewActive" (click)="togglePreviewMode()">
+        <span class="graphic"></span>
+      </div>
+    </div>
   </div>
 
 </div>

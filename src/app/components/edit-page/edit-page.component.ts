@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditPageComponent implements OnInit {
 
+  editActive: boolean;
+  previewActive: boolean;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleEditMode(): void {
+    this.editActive = !this.editActive;
+  }
+  togglePreviewMode(): void {
+    this.previewActive = !this.previewActive;
+  }
 }
