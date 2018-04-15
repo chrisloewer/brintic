@@ -70,8 +70,11 @@ input, textarea {
   font-size: 14px;
   outline: none;
   box-sizing: border-box;
-  background: $neutral-lt;
   border: 1px solid $color-shaded;
+
+  &:focus {
+    border-color: $neutral-dk;
+  }
 }
 input {
   margin-bottom: 20px;
@@ -92,7 +95,7 @@ label {
   transition: all 0.2s;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &:focus {
     background: $color-primary;
     color: #ffffff;
     transition: all 0.2s;

@@ -4,6 +4,8 @@
 .home-container {
   height: 100%;
   overflow-y: auto;
+  background: #ffffff;
+  @include card-shadow;
 }
 
 .fade-in {
