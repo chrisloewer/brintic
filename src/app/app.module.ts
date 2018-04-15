@@ -7,11 +7,13 @@ import { PageControlComponent } from './components/page-control/page-control.com
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './modules/login.module';
+import { EditPageComponent } from './components/edit-page/edit-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'admin', component: AdminPageComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'edit', component: EditPageComponent },
   { path: '', component: HomePageComponent }
 ];
 
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
   declarations: [
     HomePageComponent,
     PageControlComponent,
-    AdminPageComponent
+    AdminPageComponent,
+    EditPageComponent
   ],
   providers: [],
   bootstrap: [PageControlComponent]

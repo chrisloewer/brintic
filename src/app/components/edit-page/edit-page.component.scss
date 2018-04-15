@@ -1,0 +1,28 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.page-editor {
+  display: flex;
+  height: 100%;
+  overflow: visible;
+
+  .page-editor__section {
+    width: 0;
+    flex-grow: 1;
+    margin: 0 20px;
+    background: #ffffff;
+    @include card-shadow;
+  }
+
+  .page-editor--edit {
+
+    label {
+      font-weight: 600;
+    }
+  }
+
+  .page-editor--preview {
+    flex-grow: 0;
+  }
+}
+
