@@ -6,6 +6,9 @@
   overflow-y: auto;
   background: #ffffff;
   @include card-shadow;
+  perspective: 3px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
 }
 
 .fade-in {
