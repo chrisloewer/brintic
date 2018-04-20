@@ -48,7 +48,7 @@ p {
   .home-splash__content {
     @include vertical-center-content;
     top: -50px;
-    transform: translateZ(-2px);
+    transform: translateZ(-1px);
 
     .logo {
       width: 600px;
@@ -143,9 +143,10 @@ p {
     @include vertical-center-container;
     text-align: center;
     z-index: 3;
-    transform: translateZ(1.75px) scale(0.42) translateX(55%);
 
     @media screen and (min-width: $screen-sm) {
+      transform: translateZ(1.75px) scale(0.42) translateX(55%);
+      -moz-transform: none;
       margin-right: 50px;
     }
     @media screen and (min-width: $screen-md) {
@@ -161,13 +162,19 @@ p {
       @media screen and (min-width: $screen-sm) {
         max-width: 70%;
       }
+
+      p {
+        padding: 10px;
+        background: transparentize(#ffffff, 0.2);
+      }
     }
 
     &:nth-of-type(even) {
       margin-right: unset;
-      transform: translateZ(1.75px) scale(0.42) translateX(-50%);
 
       @media screen and (min-width: $screen-sm) {
+        transform: translateZ(1.75px) scale(0.42) translateX(-50%);
+        -moz-transform: none;
         margin-left: 50px;
       }
       @media screen and (min-width: $screen-md) {
