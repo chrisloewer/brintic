@@ -27,21 +27,21 @@
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="design-spotlight" [ngClass]="isVisible('#design-spotlight') ? 'fade-in' : 'fade-out'">
         <h3 class="highlight">Design</h3>
-        <p>You're one of a kind.  You don't need a website that looks exactly like everyone else's - and that's why all of our websites are designed and built from scratch.  We don't do reusable themes.  We believe each website should have a personality as unique as it's owner.</p>
+        <p>You're one of a kind.  You don't need a generic website that looks exactly like everyone else's &ndash; and that's why all of our websites are designed and built from scratch.  We don't do reusable themes.  We believe each website should have a personality as unique as it's owner.</p>
       </div>
     </div>
-    <div class="spotlight__item spotlight__item--graphic">
+    <div class="spotlight__item spotlight__item--graphic"  [style.backgroundImage]="'url(/assets/images/wall.jpg)'">
       <div class="graphic--offset"></div>
     </div>
   </div>
   <div class="spotlight">
-    <div class="spotlight__item spotlight__item--graphic">
-      <div class="graphic--offset"></div>
+    <div class="spotlight__item spotlight__item--graphic" [style.backgroundImage]="'url(/assets/images/textiles.jpg)'">
+      <div class="graphic--offset" [style.backgroundImage]="'url(/assets/images/ribbon-mac.jpg)'"></div>
     </div>
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="custom-spotlight" [ngClass]="isVisible('#custom-spotlight') ? 'fade-in' : 'fade-out'">
         <h3 class="highlight">Completely Custom</h3>
-        <p>Every business is different.  We work with you to develop a site that precisely fits your needs.  Once your site is launched, our easy-to-use platform offers you total control over your content.</p>
+        <p>Every business is different.  We work with you to craft a site that precisely fits your needs.  Once your site is launched, our easy-to-use platform offers you total control over your content.</p>
       </div>
     </div>
   </div>
@@ -52,8 +52,8 @@
         <p>Changes appear as you type!  Preview your changes in real time so you know exactly what your website will look like before you save your changes.</p>
       </div>
     </div>
-    <div class="spotlight__item spotlight__item--graphic">
-      <div class="graphic--offset"></div>
+    <div class="spotlight__item spotlight__item--graphic" [style.backgroundImage]="'url(/assets/images/polaroid-pictures.jpg)'">
+      <div class="graphic--offset" [style.backgroundImage]="'url(/assets/images/polaroid-camera.jpg)'"></div>
     </div>
   </div>
 

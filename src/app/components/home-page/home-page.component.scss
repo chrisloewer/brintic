@@ -34,12 +34,17 @@ p {
   @include vertical-center-container;
   height: 100%;
   text-align: center;
-  background: linear-gradient(-14deg, $color-primary, $color-secondary, $color-tertiary);
+  background: $neutral-md url("/assets/images/lamp-small.jpg") no-repeat center center;
+  background-size: cover;
   @include card-shadow;
+
+  @media screen and (min-width: $screen-sm) {
+    background-image: url("/assets/images/lamp.jpg");
+  }
 
   .home-splash__content {
     @include vertical-center-content;
-    top: -100px;
+    top: -50px;
     transform: translateZ(-2px);
 
     .logo {
@@ -60,8 +65,8 @@ p {
   width: 90%;
   max-width: 900px;
   margin: 0 auto -155px;
-  padding: 40px 30px;
-  background: $color-tertiary;
+  padding: 40px 0;
+  background: linear-gradient(to top, #ece9e6, #f7f7f7);
   @include card-shadow;
 
   @media screen and (min-width: $screen-sm) {
@@ -173,15 +178,18 @@ p {
       display: block;
       height: 500px;
       @include vertical-center-container;
-      background: $color-highlight;
+      background: $neutral-md no-repeat center center;
+      background-size: cover;
       @include card-shadow;
 
       .graphic--offset {
         @include vertical-center-content;
         left: -150px;
         width: 300px;
-        height: 150px;
+        height: 220px;
         background: $color-secondary;
+        background: url('https://images.unsplash.com/photo-1513705138751-16c75b89180e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b77e138a5597fc315b366ce19872d358&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+        background-size: cover;
         transform: translateZ(1px);
         @include card-shadow;
 
@@ -246,11 +254,14 @@ p {
   bottom: -50px;
   width: 90%;
   max-width: 900px;
-  padding: 40px 30px;
+  padding: 40px 0;
   margin: -70px auto 0;
-  background: $color-secondary;
-  background: linear-gradient(to top, $color-secondary, lighten($color-secondary, 10%));
+  background: linear-gradient(to top, #ece9e6, #f7f7f7);
   @include card-shadow;
+
+  @media screen and (min-width: $screen-sm) {
+    padding: 60px 20px;
+  }
 
   .get-started__content {
     :first-child {
