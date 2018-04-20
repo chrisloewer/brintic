@@ -143,6 +143,7 @@ p {
     @include vertical-center-container;
     text-align: center;
     z-index: 3;
+    transform: translateZ(1.75px) scale(0.42) translateX(55%);
 
     @media screen and (min-width: $screen-sm) {
       margin-right: 50px;
@@ -164,6 +165,7 @@ p {
 
     &:nth-of-type(even) {
       margin-right: unset;
+      transform: translateZ(1.75px) scale(0.42) translateX(-50%);
 
       @media screen and (min-width: $screen-sm) {
         margin-left: 50px;
