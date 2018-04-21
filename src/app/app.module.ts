@@ -8,6 +8,7 @@ import { AdminPageComponent } from './components/admin-page/admin-page.component
 import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './modules/login.module';
 import { EditPageComponent } from './components/edit-page/edit-page.component';
+import { WidthPipe } from './classes/width-pipe';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     HomePageComponent,
     PageControlComponent,
     AdminPageComponent,
-    EditPageComponent
+    EditPageComponent,
+    WidthPipe
   ],
   providers: [],
   bootstrap: [PageControlComponent]

@@ -20,5 +20,10 @@ export class EditPageComponent implements OnInit {
   }
   togglePreviewMode(): void {
     this.previewActive = !this.previewActive;
+
+    // Allow time for animation to finish.  Then trigger window resize to update homepage size variables
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 500);
   }
 }

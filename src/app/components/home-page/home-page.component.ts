@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -7,13 +7,26 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  @ViewChild('homePageContainer') homePageContainer: ElementRef;
+
+  homeWidth = 0;
   scrollY = 0;
+
 
   constructor(
     private elem: ElementRef
   ) { }
 
   ngOnInit() { }
+
+  @HostListener('window:resize') onResize() {
+    this.resizeHandler();
+  }
+
+  resizeHandler(): void {
+    console.log('resize called');
+    this.homeWidth = this.homePageContainer.nativeElement.offsetWidth;
+  }
 
   scrollHandler(event): void {
     // Get how many px the main container has scrolled
@@ -26,9 +39,6 @@ export class HomePageComponent implements OnInit {
 
     // For nested elements, add parent distance to get true distance to top
     const offset = domElem.offsetTop + domElem.parentElement.offsetTop;
-    if (this.scrollY >= offset) {
-      return true;
-    }
-    return false;
+    return (this.scrollY >= offset);
   }
 }
