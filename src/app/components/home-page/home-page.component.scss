@@ -145,8 +145,6 @@ p {
     z-index: 3;
 
     @media screen and (min-width: $screen-sm) {
-      transform: translateZ(1.75px) scale(0.42) translateX(55%);
-      -moz-transform: none;
       margin-right: 50px;
     }
     @media screen and (min-width: $screen-md) {
@@ -173,8 +171,6 @@ p {
       margin-right: unset;
 
       @media screen and (min-width: $screen-sm) {
-        transform: translateZ(1.75px) scale(0.42) translateX(-50%);
-        -moz-transform: none;
         margin-left: 50px;
       }
       @media screen and (min-width: $screen-md) {
