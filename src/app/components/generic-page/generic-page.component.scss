@@ -6,6 +6,7 @@
   height: 100%;
   width: 100%;
   background: $neutral-md;
+  overflow-y: auto;
   @include card-shadow;
 }
 

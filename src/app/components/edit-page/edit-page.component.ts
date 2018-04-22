@@ -10,6 +10,8 @@ export class EditPageComponent implements OnInit {
   editActive: boolean;
   previewActive: boolean;
 
+  testContentString: string;
+
   constructor() { }
 
   ngOnInit() {

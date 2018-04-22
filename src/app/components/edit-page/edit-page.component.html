@@ -12,13 +12,13 @@
     <div class="container">
       <label>Title</label>
       <input type="text" title="Title">
-      <app-quill></app-quill>
+      <app-quill [(editorContent)]="testContentString"></app-quill>
     </div>
   </div>
 
   <div class="page-editor__section page-editor--preview" [class.open]="!editActive">
 
-    <app-home-page></app-home-page>
+    <app-generic-page [(bodyContent)]="testContentString"></app-generic-page>
 
     <div class="control-buttons">
       <div class="button--expand" [class.active]="previewActive" (click)="togglePreviewMode()">

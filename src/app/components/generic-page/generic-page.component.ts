@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-generic-page',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenericPageComponent implements OnInit {
 
+  @Input() bodyContent: string;
+
   constructor() { }
 
   ngOnInit() {
+    if (!this.bodyContent) {
+      this.bodyContent = 'Generic Content will go here';
+    }
   }
 
 }

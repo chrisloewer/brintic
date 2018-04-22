@@ -12,6 +12,7 @@ import { WidthPipe } from './classes/width-pipe';
 import { QuillModule } from 'ngx-quill';
 import { QuillComponent } from './components/quill/quill.component';
 import { GenericPageComponent } from './components/generic-page/generic-page.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     LoginModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
     QuillModule
   ],
