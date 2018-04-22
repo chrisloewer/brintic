@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +7,6 @@ import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular
 })
 export class HomePageComponent implements OnInit {
 
-  @ViewChild('homePageContainer') homePageContainer: ElementRef;
-
-  homeWidth = 0;
   scrollY = 0;
 
 
@@ -18,15 +15,6 @@ export class HomePageComponent implements OnInit {
   ) { }
 
   ngOnInit() { }
-
-  @HostListener('window:resize') onResize() {
-    this.resizeHandler();
-  }
-
-  resizeHandler(): void {
-    console.log('resize called');
-    this.homeWidth = this.homePageContainer.nativeElement.offsetWidth;
-  }
 
   scrollHandler(event): void {
     // Get how many px the main container has scrolled
