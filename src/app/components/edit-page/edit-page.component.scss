@@ -9,7 +9,6 @@
   .page-editor__section {
     position: relative;
     width: 0;
-    margin: 0 20px;
     background: #ffffff;
     @include card-shadow;
     transition: all 0.4s;
@@ -22,14 +21,15 @@
     // Toggle section is visible
     &.open {
       flex-grow: 1;
+      margin: 0;
       transition: all 0.4s;
       * {
         opacity: 1;
       }
-    }
 
-    &:last-of-type {
-      margin-right: 0;
+      & + .open {
+        margin-left: 20px;
+      }
     }
 
     .control-buttons {
@@ -63,8 +63,10 @@
   }
 
   .page-editor--edit {
-    max-width: 900px;
-    margin: 0 auto;
+    &.open {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
     label {
       font-weight: 600;
