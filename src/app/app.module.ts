@@ -11,9 +11,11 @@ import { EditPageComponent } from './components/edit-page/edit-page.component';
 import { WidthPipe } from './classes/width-pipe';
 import { QuillModule } from 'ngx-quill';
 import { QuillComponent } from './components/quill/quill.component';
+import { GenericPageComponent } from './components/generic-page/generic-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
+  { path: 'generic', component: GenericPageComponent },
   { path: 'admin', component: AdminPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'edit', component: EditPageComponent },
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     AdminPageComponent,
     EditPageComponent,
     WidthPipe,
-    QuillComponent
+    QuillComponent,
+    GenericPageComponent
   ],
   providers: [],
   bootstrap: [PageControlComponent]

@@ -1,0 +1,34 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.main-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: $neutral-md;
+  @include card-shadow;
+}
+
+.header-splash {
+  height: 400px;
+  background: url("/assets/images/green-wall-texture.jpg") no-repeat center center;
+  background-size: cover;
+  @include card-shadow;
+  @include vertical-center-container;
+
+  .header-splash__content {
+    @include vertical-center-content;
+    top: -50px;
+  }
+}
+
+.card {
+  position: relative;
+  max-width: 900px;
+  min-height: 400px;
+  top: -100px;
+  margin: 0 auto;
+  padding: 60px;
+  background: #ffffff;
+  @include card-shadow
+}
