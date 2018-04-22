@@ -1,0 +1,22 @@
+// Override default styles defined in theme
+// Make changes here, not in the default theme stylesheet to allow it to be updated.
+
+// Apply to child components
+// In this case, ::ng-deep will apply styling to quill-editor
+::ng-deep {
+
+  quill-editor {
+    button {
+      min-width: 0;
+      margin: 0;
+    }
+
+    .ql-editor {
+      min-height: 300px;
+
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

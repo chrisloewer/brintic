@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './modules/login.module';
 import { EditPageComponent } from './components/edit-page/edit-page.component';
 import { WidthPipe } from './classes/width-pipe';
+import { QuillModule } from 'ngx-quill';
+import { QuillComponent } from './components/quill/quill.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -22,14 +24,16 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     LoginModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    QuillModule
   ],
   declarations: [
     HomePageComponent,
     PageControlComponent,
     AdminPageComponent,
     EditPageComponent,
-    WidthPipe
+    WidthPipe,
+    QuillComponent
   ],
   providers: [],
   bootstrap: [PageControlComponent]
