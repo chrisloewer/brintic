@@ -13,6 +13,7 @@ import { QuillModule } from 'ngx-quill';
 import { QuillComponent } from './components/quill/quill.component';
 import { GenericPageComponent } from './components/generic-page/generic-page.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     BrowserModule,
     LoginModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
     QuillModule
   ],

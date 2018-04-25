@@ -6,6 +6,11 @@
 ::ng-deep {
 
   quill-editor {
+
+    * {
+      overflow: visible;
+    }
+
     button {
       min-width: 0;
       margin: 0;
