@@ -10,16 +10,18 @@
     </div>
 
     <div class="container">
-      <!--<label>Title</label>-->
-      <!--<input type="text" title="Title">-->
-      <!--<app-quill [(editorContent)]="testContentString"></app-quill>-->
+
+      <div *ngIf="post?.title">
+        <label>Title</label>
+        <input type="text" title="Title" [(ngModel)]="post.title">
+      </div>
 
 
       <div *ngFor="let contentBlock of post?.contentBlocks">
         <div [ngSwitch]="contentBlock?.inputType">
-          <h4>{{contentBlock?.displayName || contentBlock?.id}}</h4>
+          <label for="{{contentBlock?.id}}">{{contentBlock?.displayName || contentBlock?.id}}</label>
           <div *ngSwitchCase="'text'">
-            <input title="{{contentBlock.id}}" type="text" [(ngModel)]="contentBlock.content">
+            <input id="{{contentBlock?.id}}" title="{{contentBlock.id}}" type="text" [(ngModel)]="contentBlock.content">
           </div>
           <div *ngSwitchCase="'wysiwyg'">
             <app-quill [(editorContent)]='contentBlock.content'></app-quill>

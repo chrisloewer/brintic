@@ -15,14 +15,12 @@ export class EditPageComponent implements OnInit {
 
   post: Post;
 
-  testContentString: string;
-
   constructor(
     private postService: PostService
   ) { }
 
   ngOnInit() {
-    this.editActive = true;
+    // this.editActive = true;
     this.getPost();
   }
 
