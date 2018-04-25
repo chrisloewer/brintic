@@ -9,7 +9,11 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="loading-section" *ngIf="!loaded">
+      <div class="loading-section__icon"></div>
+    </div>
+
+    <div class="container" *ngIf="loaded">
 
       <div *ngIf="post?.title">
         <label>Title</label>
@@ -34,7 +38,11 @@
 
   <div class="page-editor__section page-editor--preview" [class.open]="!editActive">
 
-    <app-generic-page [(post)]="post"></app-generic-page>
+    <div class="loading-section" *ngIf="!loaded">
+      <div class="loading-section__icon"></div>
+    </div>
+
+    <app-generic-page [(post)]="post" *ngIf="loaded"></app-generic-page>
 
     <div class="control-buttons">
       <div class="button--expand" [class.active]="previewActive" (click)="togglePreviewMode()">

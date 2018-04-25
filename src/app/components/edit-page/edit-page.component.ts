@@ -12,12 +12,15 @@ export class EditPageComponent implements OnInit {
 
   editActive: boolean;
   previewActive: boolean;
+  loaded: boolean;
 
   post: Post;
 
   constructor(
     private postService: PostService
-  ) { }
+  ) {
+    this.loaded = false;
+  }
 
   ngOnInit() {
     // this.editActive = true;
@@ -36,7 +39,7 @@ export class EditPageComponent implements OnInit {
       .subscribe(
         (p) => {
           this.post = p;
-          console.log(this.post);
+          this.loaded = true;
         }
       );
   }

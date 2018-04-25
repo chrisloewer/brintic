@@ -146,6 +146,16 @@ label {
   }
 }
 
+
+.loading-section {
+  .loading-section__icon {
+    background: url("/assets/images/icons/loading-icon.svg") no-repeat center;
+    background-size: contain;
+    height: 80px;
+    margin: 60px 0;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
