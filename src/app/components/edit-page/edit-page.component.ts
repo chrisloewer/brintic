@@ -35,7 +35,7 @@ export class EditPageComponent implements OnInit {
   }
 
   getPost(): void {
-    this.postService.getPost('00004')
+    this.postService.getPost('generic')
       .subscribe(
         (p) => {
           this.post = p;

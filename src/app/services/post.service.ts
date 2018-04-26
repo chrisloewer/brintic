@@ -12,7 +12,7 @@ export class PostService {
   ) { }
 
   getPost(id): Observable<Post> {
-    const postUrl = environment.apiUrl + '/postapi/' + id;
+    const postUrl = environment.apiUrl + '/posts/' + id;
     return this.http.get<Post>(postUrl);
   }
 
