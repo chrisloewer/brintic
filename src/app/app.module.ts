@@ -14,13 +14,14 @@ import { QuillComponent } from './components/quill/quill.component';
 import { GenericPageComponent } from './components/generic-page/generic-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'generic', component: GenericPageComponent },
-  { path: 'admin', component: AdminPageComponent },
+  { path: 'admin', component: AdminPageComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginComponent },
-  { path: 'edit', component: EditPageComponent },
+  { path: 'edit', component: EditPageComponent, canActivate: [AuthGuardService] },
   { path: '', component: HomePageComponent }
 ];
 

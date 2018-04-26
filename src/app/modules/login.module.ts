@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from '../components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { AuthGuardService } from '../services/auth-guard.service';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     LoginComponent
   ],
-  providers: []
+  providers: [AuthGuardService]
 })
 export class LoginModule { }
