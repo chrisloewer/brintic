@@ -88,7 +88,7 @@ label {
   width: unset;
   padding: 10px 30px;
   margin: 0 auto;
-  background: #ffffff;
+  background: $neutral-lt;
   border-radius: 15px;
   border: 1px solid $color-primary;
   color: $color-primary;
@@ -99,6 +99,7 @@ label {
     background: $color-primary;
     color: #ffffff;
     transition: all 0.2s;
+    outline: none;
   }
 }
 

@@ -43,4 +43,15 @@ export class EditPageComponent implements OnInit {
         }
       );
   }
+
+  setPost(): void {
+    console.log(this.post);
+    this.postService.setPost(this.post)
+      .subscribe(
+        (res) => {
+          console.log(res);
+        },
+        (err) => console.warn(err)
+      );
+  }
 }
