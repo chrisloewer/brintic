@@ -1,0 +1,24 @@
+// These styles mimic the styles that are limited to the Quill editor by default
+// The purpose is to allow general styles to be saved in the editor, but rendered in other views
+// ie. Right align text in editor, save, display as right align in view.
+
+.ql-align-left {
+  text-align: left;
+}
+.ql-align-center {
+  text-align: center;
+}
+.ql-align-right {
+  text-align: right;
+}
+
+.ql-size-small {
+  font-size: 0.75em;
+}
+.ql-size-large {
+  font-size: 1.5em;
+}
+.ql-size-huge {
+  font-size: 2.5em;
+}
+

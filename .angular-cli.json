@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "assets/styles/general.scss"
+        "assets/styles/general.scss",
+        "assets/styles/quill-view-styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
