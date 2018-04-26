@@ -21,3 +21,9 @@
   vertical-align: middle;
   max-width: 95%;
 }
+
+%body-container {
+  overflow-y: auto;
+  max-width: 900px;
+  margin: 0 auto;
+}

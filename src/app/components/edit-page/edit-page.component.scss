@@ -64,9 +64,7 @@
 
   .page-editor--edit {
     &.open {
-      overflow-y: auto;
-      max-width: 900px;
-      margin: 0 auto;
+      @extend %body-container;
     }
 
     label {

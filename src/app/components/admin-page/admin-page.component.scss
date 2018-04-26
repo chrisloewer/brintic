@@ -1,6 +1,13 @@
 @import "./src/assets/styles/utilities/variables";
 @import "./src/assets/styles/utilities/mixins";
 
+.admin-page {
+  @extend %body-container;
+  height: 100%;
+  background: #ffffff;
+  @include card-shadow;
+}
+
 .logo {
   margin: 60px auto 30px;
   height: 50px;
