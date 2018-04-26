@@ -96,10 +96,12 @@ label {
   cursor: pointer;
 
   &:hover, &:focus {
-    background: $color-primary;
-    color: #ffffff;
+    background: lighten($color-highlight, 5%);
     transition: all 0.2s;
     outline: none;
+  }
+  &:active {
+    background: $color-highlight;
   }
 }
 
