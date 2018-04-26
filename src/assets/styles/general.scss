@@ -32,12 +32,12 @@ h3 {
 }
 
 a {
-  color: $color-highlight;
+  color: $color-primary;
   &:hover {
-    color: darken($color-highlight, 10%);
+    color: darken($color-primary, 10%);
   }
   &:active {
-    color: darken($color-highlight, 15%);
+    color: darken($color-primary, 15%);
   }
 }
 
@@ -54,7 +54,7 @@ h3.highlight {
     left: 12px;
     width: calc(100% + 30px);
     height: 30px;
-    background: transparentize($color-tertiary, 0.3);
+    background: transparentize($color-highlight, 0.3);
     z-index: -1;
   }
 }
@@ -122,25 +122,25 @@ label {
 
 .button--action {
   padding: 20px 30px;
-  border: 1px solid $color-tertiary;
+  border: 1px solid $color-highlight;
   border-radius: 50px;
-  color: $color-tertiary;
+  color: $color-highlight;
   transition: all 0.2s;
 
   &:hover {
-    background: $color-tertiary;
-    border: 1px solid $color-tertiary;
+    background: $color-highlight;
+    border: 1px solid $color-highlight;
     color: $color-primary;
     cursor: pointer;
     transition: all 0.2s;
   }
 
   &.dark {
-    border: 1px solid $color-highlight-dk;
-    color: $color-highlight-dk;
+    border: 1px solid $color-primary;
+    color: $color-primary;
 
     &:hover {
-      background: $color-highlight-dk;
+      background: $color-primary;
       color: #ffffff;
     }
   }

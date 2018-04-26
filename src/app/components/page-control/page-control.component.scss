@@ -17,7 +17,7 @@ $frame-bottom-size: 40px;
     height: 60px;
     top: 10px;
     left: 20px;
-    background: $color-highlight-dk;
+    background: $color-primary;
     border-radius: 50%;
     z-index: 10;
     @include card-shadow;
@@ -69,7 +69,7 @@ $frame-bottom-size: 40px;
     @media screen and (max-width: $screen-sm - 1) {
       height: 0;
       text-align: center;
-      background: $color-tertiary;
+      background: $color-highlight;
       overflow: hidden;
       transition: all 0.2s;
 
@@ -131,7 +131,7 @@ $frame-bottom-size: 40px;
             left: -8px;
             width: 0;
             height: 15px;
-            background: $color-tertiary;
+            background: $color-highlight;
             z-index: -1;
             transition: all 0.2s;
           }
@@ -173,7 +173,7 @@ $frame-bottom-size: 40px;
       margin: 0 20px;
       font-size: 12px;
       font-weight: 300;
-      color: $color-highlight-dk;
+      color: $color-primary;
     }
   }
 }
