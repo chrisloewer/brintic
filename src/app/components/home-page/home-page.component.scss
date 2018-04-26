@@ -286,6 +286,7 @@ p {
 }
 
 .footer {
+  overflow: hidden;
   min-height: 200px;
   padding-top: 100px;
   background: $color-highlight;

@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://k6f9hug0pi.execute-api.us-west-2.amazonaws.com/test'
+  apiUrl: 'https://0zn1uwjsg4.execute-api.us-west-2.amazonaws.com/v1'
 };

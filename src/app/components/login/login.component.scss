@@ -13,16 +13,22 @@
 }
 
 .login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
 
   .login__content {
-    background: #ffffff;
     width: 400px;
+    margin: 100px auto 0;
     padding: 30px;
+    background: #ffffff;
     @include card-shadow;
+  }
+
+  .message-section {
+    text-align: center;
+
+    .error-msg {
+      color: $color-danger;
+    }
   }
 }
 

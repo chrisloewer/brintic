@@ -4,7 +4,17 @@
   <div class="login">
     <div class="login__content">
       <div class="logo"></div>
-      <form>
+
+      <div class="loading-section" *ngIf="loading">
+        <div class="loading-section__icon"></div>
+      </div>
+
+      <div class="message-section">
+        <p class="error-msg">{{errorMsg}}</p>
+        <p class="general-msg">{{generalMsg}}</p>
+      </div>
+
+      <form *ngIf="!loggedIn && !loading" (submit)="login()">
         <label for="username">User</label>
         <input type="text" id="username" name="username" [(ngModel)]="username">
         <label for="password">Password</label>
