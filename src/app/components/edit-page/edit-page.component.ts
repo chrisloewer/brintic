@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../classes/post';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit-page',
@@ -13,18 +14,24 @@ export class EditPageComponent implements OnInit {
   editActive: boolean;
   previewActive: boolean;
   loaded: boolean;
-
+  pageId: string;
   post: Post;
 
   constructor(
-    private postService: PostService
+    private postService: PostService,
+    private route: ActivatedRoute
   ) {
     this.loaded = false;
   }
 
   ngOnInit() {
     // this.editActive = true;
-    this.getPost();
+    this.route.params.subscribe(params => {
+      this.pageId = params['id'];
+      if (this.pageId !== undefined) {
+        this.getPost();
+      }
+    });
   }
 
   toggleEditMode(): void {
@@ -35,7 +42,7 @@ export class EditPageComponent implements OnInit {
   }
 
   getPost(): void {
-    this.postService.getPost('generic')
+    this.postService.getPost(this.pageId)
       .subscribe(
         (p) => {
           this.post = p;
@@ -45,7 +52,6 @@ export class EditPageComponent implements OnInit {
   }
 
   setPost(): void {
-    console.log(this.post);
     this.postService.setPost(this.post)
       .subscribe(
         (res) => {

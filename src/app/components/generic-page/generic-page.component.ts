@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../../classes/post';
 import { PostService } from '../../services/post.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-generic-page',
@@ -11,12 +12,30 @@ import { PostService } from '../../services/post.service';
 export class GenericPageComponent implements OnInit {
 
   @Input() post: Post;
+  pageId: string;
 
   constructor(
-    private postService: PostService
+    private postService: PostService,
+    private route: ActivatedRoute
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    // if Post not passed in by edit component, load based on url
+    if (!this.post) {
+      this.route.params.subscribe(params => {
+        this.pageId = params['id'];
+        this.getPost();
+      });
+    }
+  }
+
+  getPost(): void {
+    this.postService.getPost(this.pageId)
+      .subscribe(
+        (p) => this.post = p,
+        (err) => console.warn(err)
+      );
+  }
 
   getContent(contentBlockId): String {
     try {

@@ -24,7 +24,6 @@ export class AuthService {
     try {
       user = JSON.parse(localStorage.getItem('userInfo'));
       if (!jwtHelper.isTokenExpired(user.token)) {
-        console.log('User loaded from local storage');
         return user;
       }
     } catch (e) {
