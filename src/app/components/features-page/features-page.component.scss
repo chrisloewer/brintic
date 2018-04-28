@@ -1,0 +1,73 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.main-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  overflow-y: auto;
+  @include card-shadow;
+}
+
+.header-splash {
+  height: 400px;
+  background: url("/assets/images/lamp-hangers.jpg") no-repeat center center;
+  background-size: cover;
+  @include box-shadow-lt;
+  @include vertical-center-container;
+
+  .header-splash__content {
+    @include vertical-center-content;
+  }
+}
+
+.feature-blurb {
+  text-align: center;
+  margin: 140px 40px;
+
+  @media screen and (min-width: $screen-md) {
+    margin: 200px 40px;
+  }
+
+  .feature-blurb__content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.feature-section {
+
+  .feature__item {
+    min-height: 300px;
+
+    @media screen and (min-width: $screen-md) {
+      min-height: 500px;
+    }
+
+    &.feature__item--graphic {
+      background: fixed no-repeat center center;
+      background-size: cover;
+      display: none;
+
+      @media screen and (min-width: $screen-md) {
+        display: block;
+      }
+    }
+    &.feature__item--text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 60px;
+      z-index: 3;
+
+      @media screen and (min-width: $screen-md) {
+        @include box-shadow-lt;
+      }
+
+      .text--content {
+        max-width: 700px;
+      }
+    }
+  }
+}

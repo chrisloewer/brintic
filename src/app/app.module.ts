@@ -15,11 +15,13 @@ import { GenericPageComponent } from './components/generic-page/generic-page.com
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuardService } from './services/auth-guard.service';
+import { FeaturesPageComponent } from './components/features-page/features-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'admin', component: AdminPageComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginComponent },
+  { path: 'features', component: FeaturesPageComponent },
   { path: 'edit/:id', component: EditPageComponent, canActivate: [AuthGuardService] },
   { path: ':id', component: GenericPageComponent },
   { path: '', component: HomePageComponent }
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
     EditPageComponent,
     WidthPipe,
     QuillComponent,
-    GenericPageComponent
+    GenericPageComponent,
+    FeaturesPageComponent
   ],
   providers: [],
   bootstrap: [PageControlComponent]
