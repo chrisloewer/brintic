@@ -257,6 +257,18 @@ p {
   }
 }
 
+.image-divider {
+  display: none;
+
+  @media screen and (min-width: $screen-md) {
+    display: block;
+    height: 400px;
+    background: url("/assets/images/lamp-hangers.jpg") fixed no-repeat center center;
+    background-size: cover;
+    @include inset-shadow;
+  }
+}
+
 .get-started {
   position: relative;
   bottom: -50px;

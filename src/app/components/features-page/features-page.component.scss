@@ -52,6 +52,7 @@
 
       @media screen and (min-width: $screen-md) {
         display: block;
+        @include inset-shadow;
       }
     }
     &.feature__item--text {
@@ -59,10 +60,6 @@
       align-items: center;
       justify-content: center;
       padding: 0 60px;
-
-      @media screen and (min-width: $screen-md) {
-        @include box-shadow-lt;
-      }
 
       .text--content {
         max-width: 700px;
