@@ -23,9 +23,14 @@ const appRoutes: Routes = [
   { path: 'admin', component: AdminPageComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginComponent },
   { path: 'features', component: FeaturesPageComponent },
+  { path: 'edit',
+    redirectTo: '/admin',
+    pathMatch: 'full'
+  },
   { path: 'edit/:id', component: EditPageComponent, canActivate: [AuthGuardService] },
   { path: ':id', component: GenericPageComponent },
-  { path: '', component: HomePageComponent }
+  { path: '', component: HomePageComponent },
+  { path: '**', component: HomePageComponent }
 ];
 
 @NgModule({
