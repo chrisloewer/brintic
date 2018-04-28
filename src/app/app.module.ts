@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuardService } from './services/auth-guard.service';
 import { FeaturesPageComponent } from './components/features-page/features-page.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
     WidthPipe,
     QuillComponent,
     GenericPageComponent,
-    FeaturesPageComponent
+    FeaturesPageComponent,
+    FooterComponent
   ],
   providers: [],
   bootstrap: [PageControlComponent]

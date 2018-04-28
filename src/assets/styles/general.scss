@@ -44,8 +44,9 @@ h3.highlight {
   display: inline-block;
   position: relative;
   overflow: visible;
+  z-index: 1;
 
-  &:after {
+  &:before {
     content: '';
     display: inline-block;
     position: absolute;
@@ -126,6 +127,7 @@ label {
   border: 1px solid $color-highlight;
   border-radius: 50px;
   color: $color-highlight;
+  outline: none;
   transition: all 0.2s;
 
   &:hover {
@@ -143,6 +145,15 @@ label {
     &:hover {
       background: $color-primary;
       color: #ffffff;
+    }
+  }
+  &.light {
+    background: #ffffff;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background: $color-highlight;
     }
   }
 }

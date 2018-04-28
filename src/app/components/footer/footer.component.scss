@@ -1,0 +1,23 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.footer {
+  overflow: hidden;
+  min-height: 200px;
+  padding-top: 100px;
+  background: $color-primary;
+  text-align: center;
+
+  .footer__col--links {
+    margin: 20px 0;
+  }
+
+  a {
+    color: $color-highlight;
+    margin: 20px;
+  }
+
+  .button--action {
+    display: inline-block;
+  }
+}
