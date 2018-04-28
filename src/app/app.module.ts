@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PageControlComponent } from './components/page-control/page-control.component';
@@ -17,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthGuardService } from './services/auth-guard.service';
 import { FeaturesPageComponent } from './components/features-page/features-page.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MaterialModule } from './modules/material.module';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -39,6 +39,7 @@ const appRoutes: Routes = [
     LoginModule,
     FormsModule,
     HttpClientModule,
+    MaterialModule,
     RouterModule.forRoot(appRoutes),
     QuillModule
   ],

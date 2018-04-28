@@ -1,0 +1,25 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.snackbar {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  padding: 14px 24px;
+
+  &.success {
+    background: $color-success;
+  }
+  &.error {
+    background: $color-secondary;
+  }
+
+
+  .snackbar__close {
+    width: 20px;
+    height: 20px;
+    background: url("/assets/images/icons/close-icon.svg") no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+}

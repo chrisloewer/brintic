@@ -9,6 +9,18 @@
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1), 0 0 5px 0 rgba(0, 0, 0, 0.12);
 }
 
+@mixin mat-icon-font() {
+  font-family: 'Material Icons', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
 @mixin vertical-center-container() {
   position: relative;
 

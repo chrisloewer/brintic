@@ -1,0 +1,51 @@
+@import '~@angular/material/theming';
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$theme-app-primary: mat-palette($mat-grey);
+$theme-app-accent:  mat-palette($mat-blue-grey);
+
+// The warn palette is optional (defaults to red).
+$theme-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme-app-theme: mat-light-theme($theme-app-primary, $theme-app-accent, $theme-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme-app-theme);
+
+
+// ********************************************************************
+// Snackbar Overrides
+// ********************************************************************
+
+.mat-simple-snackbar-action {
+  @include mat-icon-font();
+  color: #000000;
+}
+
+.mat-snack-bar-container {
+  padding: 0 !important;
+  background: $neutral-md;
+  color: #000000;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .4), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.mat-snack-bar-container.mat-snack-bar-center {
+  margin-bottom: 30px !important;
+}
+
+// ********************************************************************
+// Dialog Overrides
+// ********************************************************************
+

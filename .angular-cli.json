@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "assets/styles/general.scss",
-        "assets/styles/quill-view-styles.scss"
+        "assets/styles/quill-view-styles.scss",
+        "assets/styles/material-theme.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
