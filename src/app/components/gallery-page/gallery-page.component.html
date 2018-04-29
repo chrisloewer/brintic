@@ -6,8 +6,28 @@
     </div>
   </div>
 
+  <div class="loading-section" *ngIf="loading">
+    <div class="loading-section__icon"></div>
+  </div>
+
   <div class="gallery">
     <div class="gallery__item"  *ngFor="let img of images" [style.backgroundImage]="'url(' + img.src + ')'"></div>
   </div>
+
+  <form class="file-upload" (submit)="uploadImage()">
+    <div class="input-file">
+      <input type="file" name="file" id="file" (change)="fileSelected($event)">
+      <label for="file">Add Image</label>
+    </div>
+
+    <div class="img-preview" *ngIf="fileDataUri">
+      <img [src]="fileDataUri">
+      <label>{{fileLabel}}</label>
+    </div>
+
+    <div *ngIf="fileDataUri">
+      <input class="button--action light" type="submit">
+    </div>
+  </form>
 
 </div>

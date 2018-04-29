@@ -47,3 +47,63 @@
     }
   }
 }
+
+.file-upload {
+  text-align: center;
+  margin-bottom: 80px;
+
+  .input-file {
+    text-align: center;
+
+    input[type=file] {
+      // pseudo hide element (full hide causes issues with default form behavior)
+      // Retain height/width (removing this breaks tab navigation in some browsers)
+      width: 0.1px;
+      height: 0.1px;
+      padding: 0;
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+
+      &:focus + label {
+        outline: none;
+        box-shadow: 0 0 3px $color-secondary;
+      }
+    }
+
+    label{
+      display: inline-block;
+      max-width: 250px;
+      padding: 15px 30px;
+      border: 2px solid #000000;
+      cursor: pointer;
+      font-weight: 700;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .img-preview {
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid $color-shaded;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 200px;
+      height: 200px;
+    }
+    label {
+      display: inline-block;
+      padding: 8px;
+      font-size: 12px;
+    }
+  }
+
+  .button--action {
+    display: inline-block;
+    width: unset;
+  }
+}

@@ -29,4 +29,16 @@ export class PostService {
     return this.http.get<Image[]>(postUrl);
   }
 
+  uploadImage(imageDataUri): Observable<any> {
+    const postUrl = environment.apiUrl + '/images';
+    const options = AuthService.getAuthHeaderOptions();
+
+    // send only the data for the image
+    // fileType will be double-checked by the server
+    const params = {
+      img: imageDataUri.split(',')[1]
+    };
+    return this.http.post(postUrl, params, options);
+  }
+
 }
