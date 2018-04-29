@@ -1,0 +1,50 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.gallery-modal {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 0;
+}
+
+.gallery {
+  text-align: center;
+  margin: 80px 10px;
+
+  @media screen and (min-width: $screen-md) {
+    margin: 80px 60px;
+  }
+
+  .gallery__item {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid $color-shaded;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .image {
+      width: 120px;
+      height: 150px;
+      background: $neutral-lt no-repeat center center;
+      background-size: cover;
+
+      @media screen and (min-width: $screen-md) {
+        width: 150px;
+      }
+    }
+
+    label {
+      display: inline-block;
+      margin: 0;
+      padding: 8px;
+      font-size: 12px;
+
+      &.delete {
+        color: $color-danger;
+        cursor: pointer;
+      }
+    }
+
+  }
+}

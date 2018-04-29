@@ -17,12 +17,14 @@ import { FeaturesPageComponent } from './components/features-page/features-page.
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from './modules/material.module';
 import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
+import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'admin', component: AdminPageComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginComponent },
   { path: 'gallery', component: GalleryPageComponent },
+  { path: 'modal', component: GalleryModalComponent },
   { path: 'features', component: FeaturesPageComponent },
   { path: 'edit',
     redirectTo: '/admin',
@@ -54,6 +56,7 @@ const appRoutes: Routes = [
     FeaturesPageComponent,
     FooterComponent,
     GalleryPageComponent,
+    GalleryModalComponent,
   ],
   providers: [],
   bootstrap: [PageControlComponent]
