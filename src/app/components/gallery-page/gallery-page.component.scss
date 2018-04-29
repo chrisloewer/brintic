@@ -33,24 +33,40 @@
   .gallery__item {
     position: relative;
     display: inline-block;
-    width: 120px;
-    height: 150px;
     margin: 10px;
     border: 1px solid $color-shaded;
     border-radius: 5px;
-    background: $neutral-lt no-repeat center center;
-    background-size: cover;
     overflow: hidden;
 
-    @media screen and (min-width: $screen-md) {
-      width: 150px;
+    .image {
+      width: 120px;
+      height: 150px;
+      background: $neutral-lt no-repeat center center;
+      background-size: cover;
+
+      @media screen and (min-width: $screen-md) {
+        width: 150px;
+      }
     }
+
+    label {
+      display: inline-block;
+      margin: 0;
+      padding: 8px;
+      font-size: 12px;
+
+      &.delete {
+        color: $color-danger;
+        cursor: pointer;
+      }
+    }
+
   }
 }
 
 .file-upload {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 
   .input-file {
     text-align: center;
@@ -84,7 +100,7 @@
 
   .img-preview {
     display: inline-block;
-    margin: 20px;
+    margin: 0 20px 20px;
     border: 1px solid $color-shaded;
     border-radius: 5px;
     overflow: hidden;
@@ -104,6 +120,6 @@
 
   .button--action {
     display: inline-block;
-    width: unset;
+    width: 200px;
   }
 }

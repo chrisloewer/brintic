@@ -41,4 +41,10 @@ export class PostService {
     return this.http.post(postUrl, params, options);
   }
 
+  deleteImage(fileName): Observable<any> {
+    const postUrl = environment.apiUrl + '/images/' + fileName;
+    const options = AuthService.getAuthHeaderOptions();
+    return this.http.delete(postUrl, options);
+  }
+
 }

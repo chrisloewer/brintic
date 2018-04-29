@@ -11,13 +11,15 @@
   </div>
 
   <div class="gallery">
-    <div class="gallery__item"  *ngFor="let img of images" [style.backgroundImage]="'url(' + img.src + ')'"></div>
+    <div class="gallery__item"  *ngFor="let img of images">
+      <div class="image" [style.backgroundImage]="'url(' + img.src + ')'"></div>
+      <label class="delete" *ngIf="loggedIn" (click)="deleteImage(img.name)">Delete</label>
+    </div>
   </div>
 
-  <form class="file-upload" (submit)="uploadImage()">
-    <div class="input-file">
-      <input type="file" name="file" id="file" (change)="fileSelected($event)">
-      <label for="file">Add Image</label>
+  <form class="file-upload" (submit)="uploadImage()" *ngIf="loggedIn">
+    <div *ngIf="fileDataUri">
+      <input class="button--action light" type="submit" value="UPLOAD">
     </div>
 
     <div class="img-preview" *ngIf="fileDataUri">
@@ -25,8 +27,9 @@
       <label>{{fileLabel}}</label>
     </div>
 
-    <div *ngIf="fileDataUri">
-      <input class="button--action light" type="submit">
+    <div class="input-file">
+      <input type="file" name="file" id="file" (change)="fileSelected($event)">
+      <label for="file">Add Image</label>
     </div>
   </form>
 

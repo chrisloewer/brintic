@@ -3,6 +3,7 @@ import { PostService } from '../../services/post.service';
 import { Image } from '../../classes/image';
 import { MatSnackBar } from '@angular/material';
 import { MatSnackBarComponent } from '../mat-snack-bar/mat-snack-bar.component';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-gallery-page',
@@ -22,6 +23,7 @@ export class GalleryPageComponent implements OnInit {
     'image/jpeg',
     'image/png'
   ];
+  loggedIn: boolean;
 
   constructor(
     private postService: PostService,
@@ -30,6 +32,7 @@ export class GalleryPageComponent implements OnInit {
 
   ngOnInit() {
     this.loadImages();
+    this.loggedIn = AuthService.isAuthenticated();
   }
 
   loadImages(): void {
@@ -42,6 +45,20 @@ export class GalleryPageComponent implements OnInit {
         (err) => {
           console.warn(err);
           this.loading = false;
+        }
+      );
+  }
+
+  deleteImage(imageName: string): void {
+    this.postService.deleteImage(imageName)
+      .subscribe(
+        () => {
+          this.loadImages();
+          this.successSnackbar('Image deleted successfully.');
+        },
+        () => {
+          this.errMsg = 'An error occurred while deleting this image.  Please try again.';
+          this.errorSnackbar('Failed to delete image.');
         }
       );
   }
@@ -67,7 +84,6 @@ export class GalleryPageComponent implements OnInit {
   }
 
   uploadImage(): void {
-    console.log('Upload Image');
     this.postService.uploadImage(this.fileDataUri)
       .subscribe(
         () => {
@@ -75,7 +91,7 @@ export class GalleryPageComponent implements OnInit {
           this.fileLabel = '';
           this.errMsg = '';
           this.fileDataUri = '';
-          this.successSnackbar('Image upload complete');
+          this.successSnackbar('Image upload complete.');
         },
         () => {
           this.errMsg = 'An error occurred while adding this image.  Please try again.';
