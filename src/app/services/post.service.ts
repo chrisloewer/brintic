@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Post } from '../classes/post';
 import { environment } from '../../environments/environment';
 import { AuthService } from './auth.service';
+import { Image } from '../classes/image';
 
 @Injectable()
 export class PostService {
@@ -21,6 +22,11 @@ export class PostService {
     const postUrl = environment.apiUrl + '/posts';
     const options = AuthService.getAuthHeaderOptions();
     return this.http.post(postUrl, p, options);
+  }
+
+  getGallery(): Observable<Image[]> {
+    const postUrl = environment.apiUrl + '/images';
+    return this.http.get<Image[]>(postUrl);
   }
 
 }

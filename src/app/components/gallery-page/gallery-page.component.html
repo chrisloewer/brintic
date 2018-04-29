@@ -1,0 +1,13 @@
+<div class="main-container">
+
+  <div class="header-splash center-text">
+    <div class="header-splash__content">
+      <h1>Gallery</h1>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery__item"  *ngFor="let img of images" [style.backgroundImage]="'url(' + img.src + ')'"></div>
+  </div>
+
+</div>

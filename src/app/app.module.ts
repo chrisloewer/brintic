@@ -7,7 +7,6 @@ import { AdminPageComponent } from './components/admin-page/admin-page.component
 import { LoginComponent } from './components/login/login.component';
 import { LoginModule } from './modules/login.module';
 import { EditPageComponent } from './components/edit-page/edit-page.component';
-import { WidthPipe } from './classes/width-pipe';
 import { QuillModule } from 'ngx-quill';
 import { QuillComponent } from './components/quill/quill.component';
 import { GenericPageComponent } from './components/generic-page/generic-page.component';
@@ -17,11 +16,13 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { FeaturesPageComponent } from './components/features-page/features-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from './modules/material.module';
+import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'admin', component: AdminPageComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginComponent },
+  { path: 'gallery', component: GalleryPageComponent },
   { path: 'features', component: FeaturesPageComponent },
   { path: 'edit',
     redirectTo: '/admin',
@@ -48,11 +49,11 @@ const appRoutes: Routes = [
     PageControlComponent,
     AdminPageComponent,
     EditPageComponent,
-    WidthPipe,
     QuillComponent,
     GenericPageComponent,
     FeaturesPageComponent,
-    FooterComponent
+    FooterComponent,
+    GalleryPageComponent,
   ],
   providers: [],
   bootstrap: [PageControlComponent]

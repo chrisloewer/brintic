@@ -1,0 +1,49 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.main-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  overflow-y: auto;
+  @include card-shadow;
+}
+
+.header-splash {
+  height: 400px;
+  background: url("/assets/images/lamp-hangers.jpg") no-repeat center center;
+  background-size: cover;
+  @include box-shadow-lt;
+  @include vertical-center-container;
+
+  .header-splash__content {
+    @include vertical-center-content;
+  }
+}
+
+.gallery {
+  text-align: center;
+  margin: 80px 10px;
+
+  @media screen and (min-width: $screen-md) {
+    margin: 80px 60px;
+  }
+
+  .gallery__item {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid $color-shaded;
+    border-radius: 5px;
+    background: $neutral-lt no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+
+    @media screen and (min-width: $screen-md) {
+      width: 150px;
+    }
+  }
+}
