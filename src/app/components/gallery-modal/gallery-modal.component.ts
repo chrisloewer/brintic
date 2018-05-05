@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Image } from '../../classes/image';
 import { PostService } from '../../services/post.service';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-gallery-modal',
@@ -14,7 +15,8 @@ export class GalleryModalComponent implements OnInit {
   loading = true;
 
   constructor(
-    private postService: PostService
+    private postService: PostService,
+    private dialogRef: MatDialogRef<GalleryModalComponent>
   ) { }
 
   ngOnInit() {
@@ -33,5 +35,9 @@ export class GalleryModalComponent implements OnInit {
           this.loading = false;
         }
       );
+  }
+
+  returnImage(src: string): void {
+    this.dialogRef.close(src);
   }
 }

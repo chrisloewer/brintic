@@ -67,6 +67,11 @@ export class EditPageComponent implements OnInit {
       );
   }
 
+  // Used to bind Emitter results to contentBlock.content
+  setContent(contentBlock, event) {
+    contentBlock.content = event;
+  }
+
   successSnackbar(msg: string) {
     msg = msg ? msg : 'Success!';
     this.snackBar.openFromComponent(

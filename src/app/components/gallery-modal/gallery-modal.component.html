@@ -8,7 +8,7 @@
 
   <div class="gallery">
     <div class="gallery__item"  *ngFor="let img of images">
-      <div class="image" [style.backgroundImage]="'url(' + img.src + ')'"></div>
+      <div class="image" [style.backgroundImage]="'url(' + img.src + ')'" (click)="returnImage(img.src)"></div>
     </div>
   </div>
 

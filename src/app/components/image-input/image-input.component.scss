@@ -1,0 +1,42 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.img-input {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+  padding: 0;
+  border: 1px solid $color-shaded;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  .img-input__label {
+    display: inline-block;
+    width: 130px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 15px 0;
+    background: $neutral-lt;
+    border-right: 1px solid $color-shaded;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .img-input__path {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 13px;
+    width: 80%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+    direction: rtl;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+

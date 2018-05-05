@@ -30,12 +30,17 @@
           <div *ngSwitchCase="'wysiwyg'">
             <app-quill [(editorContent)]='contentBlock.content'></app-quill>
           </div>
+          <div *ngSwitchCase="'image'">
+            <app-image-input [imagePath]="contentBlock.content" (imagePathEmitter)="setContent(contentBlock, $event)"></app-image-input>
+          </div>
         </div>
       </div>
 
       <div class="button-footer">
         <button class="btn-default" (click)="setPost()">Save</button>
       </div>
+
+
 
     </div>
   </div>

@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from './modules/material.module';
 import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.component';
+import { ImageInputComponent } from './components/image-input/image-input.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -57,6 +58,7 @@ const appRoutes: Routes = [
     FooterComponent,
     GalleryPageComponent,
     GalleryModalComponent,
+    ImageInputComponent,
   ],
   providers: [],
   bootstrap: [PageControlComponent]
