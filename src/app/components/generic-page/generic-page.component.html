@@ -1,6 +1,6 @@
 
 <div class="main-container">
-  <div class="header-splash center-text">
+  <div class="header-splash center-text"  [style.backgroundImage]="getUrl( getContent('splashImage') )">
     <div class="header-splash__content">
       <h1 [innerHTML]="post?.title"></h1>
     </div>

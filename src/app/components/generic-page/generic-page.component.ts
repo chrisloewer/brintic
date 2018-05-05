@@ -19,6 +19,15 @@ export class GenericPageComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
+  // Only return url if path is specified
+  // This stops invalid network requests while the path is being loaded from api call
+  getUrl(path: string): string {
+    if (path) {
+      return 'url(' + path + ')';
+    }
+    return null;
+  }
+
   ngOnInit() {
     // if Post not passed in by edit component, load based on url
     if (!this.post) {
