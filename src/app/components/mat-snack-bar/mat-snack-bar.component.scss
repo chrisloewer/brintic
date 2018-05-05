@@ -6,6 +6,7 @@
   justify-content: space-between;
   width: 400px;
   padding: 14px 24px;
+  font-size: 12px;
 
   &.success {
     background: $color-success;
@@ -13,7 +14,6 @@
   &.error {
     background: $color-secondary;
   }
-
 
   .snackbar__close {
     width: 16px;
