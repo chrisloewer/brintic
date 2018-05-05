@@ -171,6 +171,7 @@ label {
 
 ::-webkit-scrollbar {
   width: 8px;
+  background: transparentize($neutral-lt, 0.1);
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
