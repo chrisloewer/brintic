@@ -52,7 +52,10 @@
       <div class="loading-section__icon"></div>
     </div>
 
-    <app-generic-page [(post)]="post" *ngIf="loaded"></app-generic-page>
+    <div class="preview-container" [ngSwitch]="post?.postType" *ngIf="loaded">
+      <app-generic-page *ngSwitchCase="'default'" [(post)]="post"></app-generic-page>
+      <app-home-page  *ngSwitchCase="'home'" [(post)]="post"></app-home-page>
+    </div>
 
     <div class="control-buttons">
       <div class="button--expand" [class.active]="previewActive" (click)="togglePreviewMode()">

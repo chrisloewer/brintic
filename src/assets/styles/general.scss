@@ -22,6 +22,10 @@ h1 {
   @media screen and (min-width: $screen-md){
     font-size: 48px;
   }
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 h2 {
   font-weight: 300;

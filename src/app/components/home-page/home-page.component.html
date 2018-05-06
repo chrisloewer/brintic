@@ -3,16 +3,14 @@
   <div class="home-splash">
     <div class="home-splash__content">
       <img class="logo" src="assets/images/icons/brintic-logo-bold-full.svg">
-      <h2>A Simpler Solution</h2>
+      <h2>{{getContent('subtitle')}}</h2>
     </div>
   </div>
 
   <div class="offset-blurb">
     <div class="offset-blurb__content center-text">
-      <h1 class="center-text">What is Brintic?</h1>
       <div class="container">
-        <p>Brintic is a content management system designed to make it simple to maintain your website.  It provides a secure admin portal where you can log in, view your pages, and update their content while previewing your changes in real time.</p>
-        <p>Establishing an online presence for your business shouldn't be difficult.  Brintic makes it easy.</p>
+        <div [innerHtml]="getContent('introBlurb')"></div>
 
         <div class="demo">
           <div class="demo__link">
@@ -26,8 +24,8 @@
   <div class="spotlight">
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="design-spotlight" [ngClass]="isVisible('#design-spotlight') ? 'fade-in' : 'fade-out'">
-        <h3 class="highlight">Design</h3>
-        <p>You're one of a kind.  You don't need a generic website that looks exactly like everyone else's &ndash; and that's why all of our websites are designed and built from scratch.  We don't do reusable themes.  We believe each website should have a personality as unique as it's owner.</p>
+        <h3 class="highlight">{{getContent('spotlightOneTitle')}}</h3>
+        <div [innerHtml]="getContent('spotlightOneContent')"></div>
       </div>
     </div>
     <div class="spotlight__item spotlight__item--graphic"  [style.backgroundImage]="'url(/assets/images/wall.jpg)'">
@@ -40,16 +38,16 @@
     </div>
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="custom-spotlight" [ngClass]="isVisible('#custom-spotlight') ? 'fade-in' : 'fade-out'">
-        <h3 class="highlight">Completely Custom</h3>
-        <p>Every business is different.  We work with you to craft a site that precisely fits your needs.  Once your site is launched, our easy-to-use platform offers you total control over your content.</p>
+        <h3 class="highlight">{{getContent('spotlightTwoTitle')}}</h3>
+        <div [innerHtml]="getContent('spotlightTwoContent')"></div>
       </div>
     </div>
   </div>
   <div class="spotlight">
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="preview-spotlight" [ngClass]="isVisible('#preview-spotlight') ? 'fade-in' : 'fade-out'">
-        <h3 class="highlight">Live Preview</h3>
-        <p>Changes appear as you type!  Preview your changes in real time so you know exactly what your website will look like before you save your changes.</p>
+        <h3 class="highlight">{{getContent('spotlightThreeTitle')}}</h3>
+        <div [innerHtml]="getContent('spotlightThreeContent')"></div>
       </div>
     </div>
     <div class="spotlight__item spotlight__item--graphic" [style.backgroundImage]="'url(/assets/images/polaroid-pictures.jpg)'">
@@ -60,18 +58,15 @@
   <div class="col-container">
     <div class="col-container__item">
       <div class="graphic"></div>
-      <h3>Simple to Use</h3>
-      <p>You shouldn't have to be a tech guru to update your website.  Brintic makes this simple.</p>
+      <div [innerHtml]="getContent('itemOneContent')"></div>
     </div>
     <div class="col-container__item">
       <div class="graphic"></div>
-      <h3>Powered by AWS</h3>
-      <p>Brintic is implemented using Amazon Web Services. The AWS infrastructure boasts a 99.99% uptime guarantee and powers some of the worlds largest websites</p>
+      <div [innerHtml]="getContent('itemTwoContent')"></div>
     </div>
     <div class="col-container__item">
       <div class="graphic"></div>
-      <h3>Low Maintenance</h3>
-      <p>We worry about security updates so you don't have to.  We make sure we're up to date without any interruption to you.</p>
+      <div [innerHtml]="getContent('itemThreeContent')"></div>
     </div>
   </div>
 
@@ -79,17 +74,7 @@
 
   <div class="get-started">
     <div class="get-started__content">
-      <h1 class="center-text">Get Started!</h1>
-      <div class="container">
-        <p>We at Brintic pride ourselves on delivering a quality product.  Helping people develop their online presence by designing elegant websites brings us great joy.  But everyone's needs are different, and that is why we offer two different approaches to using Brintic.</p>
-
-        <h4>1. We Do Everything</h4>
-        <p>If you want a beautiful website, but aren't a web developer, let us take it from there.  We'll work with you to find out exactly what you want and develop a gorgeous website to fit your needs.  We'll handle everything that needs to be done to get your site up and running - and when it's live, we'll teach you how to use Brintic to maintain your new website.</p>
-        <p>Our pricing for this model varies on a case by case basis, so contact us and we will work with you to come up with quote that works for everyone.</p>
-
-        <h4>2. You Do Everything</h4>
-        <p>Brintic is entirely open source.  If you're a developer who wants to use Brintic as the backbone for their next project, please do!  The entire project is available on GitHub.  Brintic has an MIT license and can be used for free for any project, personal or commercial.  All we ask is that you let us know if you build something awesome - we would love to see it.</p>
-      </div>
+      <div class="container" [innerHtml]="getContent('outroBlurb')"></div>
     </div>
   </div>
 

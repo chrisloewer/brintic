@@ -76,6 +76,10 @@
 
   .page-editor--preview {
     overflow: hidden;
+
+    .preview-container {
+      height: 100%;
+    }
   }
 }
 
