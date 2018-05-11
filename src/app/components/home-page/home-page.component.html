@@ -27,13 +27,13 @@
         <div [innerHtml]="getContent('spotlightOne')"></div>
       </div>
     </div>
-    <div class="spotlight__item spotlight__item--graphic"  [style.backgroundImage]="'url(/assets/images/wall.jpg)'">
-      <div class="graphic--offset"></div>
+    <div class="spotlight__item spotlight__item--graphic"  [style.backgroundImage]="getUrl( getContent('spotlightOne__imageOne') )">
+      <div class="graphic--offset" [style.backgroundImage]="getUrl( getContent('spotlightOne__imageTwo') )"></div>
     </div>
   </div>
   <div class="spotlight">
-    <div class="spotlight__item spotlight__item--graphic" [style.backgroundImage]="'url(/assets/images/textiles.jpg)'">
-      <div class="graphic--offset" [style.backgroundImage]="'url(/assets/images/ribbon-mac.jpg)'"></div>
+    <div class="spotlight__item spotlight__item--graphic" [style.backgroundImage]="getUrl( getContent('spotlightTwo__imageOne') )">
+      <div class="graphic--offset" [style.backgroundImage]="getUrl( getContent('spotlightTwo__imageTwo') )"></div>
     </div>
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="custom-spotlight" [ngClass]="isVisible('#custom-spotlight') ? 'fade-in' : 'fade-out'">
@@ -47,8 +47,8 @@
         <div [innerHtml]="getContent('spotlightThree')"></div>
       </div>
     </div>
-    <div class="spotlight__item spotlight__item--graphic" [style.backgroundImage]="'url(/assets/images/polaroid-pictures.jpg)'">
-      <div class="graphic--offset" [style.backgroundImage]="'url(/assets/images/polaroid-camera.jpg)'"></div>
+    <div class="spotlight__item spotlight__item--graphic" [style.backgroundImage]="getUrl( getContent('spotlightThree__imageOne') )">
+      <div class="graphic--offset" [style.backgroundImage]="getUrl( getContent('spotlightThree__imageTwo') )"></div>
     </div>
   </div>
 
