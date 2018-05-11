@@ -1,9 +1,11 @@
 @import "./src/assets/styles/utilities/variables";
 @import "./src/assets/styles/utilities/mixins";
+@import "./src/assets/styles/general";
 
 .home-container {
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   background: #ffffff;
   @include card-shadow;
   perspective: 3px;
@@ -19,18 +21,6 @@
 .fade-out {
   opacity: 0;
   transition: all 0.5s;
-}
-
-p {
-  font-size: 12px;
-  line-height: 1.5em;
-
-  @media screen and (min-width: $screen-sm){
-    font-size: 14px;
-  }
-  @media screen and (min-width: $screen-md){
-    font-size: 18px;
-  }
 }
 
 .home-splash {
@@ -121,100 +111,106 @@ p {
   }
 }
 
-.spotlight {
-  display: flex;
-  overflow: visible;
-  margin: 100px 0;
-
-  @media screen and (min-width: $screen-sm) {
-    margin: 200px 0;
-  }
-
-  .spotlight__item {
-    width: 0;
-    flex-grow: 2;
-    flex-shrink: 1;
-    // height: 500px;
+// Spotlight content is pulled from DB.
+// It needs styles to not be component specific because the DB content will not have the component scoping tags
+::ng-deep {
+  .spotlight {
+    display: flex;
     overflow: visible;
-  }
-
-  .spotlight__item--text {
-    flex-grow: 3;
-    @include vertical-center-container;
-    text-align: center;
-    z-index: 3;
+    margin: 100px 0;
 
     @media screen and (min-width: $screen-sm) {
-      margin-right: 50px;
-    }
-    @media screen and (min-width: $screen-md) {
-      margin-right: 100px;
+      margin: 200px 0;
     }
 
+    .spotlight__item {
+      width: 0;
+      flex-grow: 2;
+      flex-shrink: 1;
+      overflow: visible;
+    }
 
-    .text--content {
-      @include vertical-center-content;
-      max-width: 80%;
-      text-align: left;
+    .spotlight__item--text {
+      flex-grow: 3;
+      @include vertical-center-container;
+      text-align: center;
+      z-index: 3;
 
       @media screen and (min-width: $screen-sm) {
-        max-width: 70%;
-      }
-
-      p {
-        padding: 10px;
-        background: transparentize(#ffffff, 0.2);
-      }
-    }
-
-    &:nth-of-type(even) {
-      margin-right: unset;
-
-      @media screen and (min-width: $screen-sm) {
-        margin-left: 50px;
+        margin-right: 50px;
       }
       @media screen and (min-width: $screen-md) {
-        margin-left: 100px;
+        margin-right: 100px;
       }
-    }
-  }
 
-  .spotlight__item--graphic {
-    display: none;
-
-    @media screen and (min-width: $screen-sm) {
-      display: block;
-      height: 500px;
-      @include vertical-center-container;
-      background: $neutral-md no-repeat center center;
-      background-size: cover;
-      @include card-shadow;
-
-      .graphic--offset {
+      .text--content {
         @include vertical-center-content;
-        left: -150px;
-        width: 300px;
-        height: 220px;
-        background: $color-secondary;
-        background: url('https://images.unsplash.com/photo-1513705138751-16c75b89180e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b77e138a5597fc315b366ce19872d358&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
-        background-size: cover;
-        transform: translateZ(1px);
-        @include card-shadow;
+        max-width: 80%;
+        text-align: left;
 
-        @media screen and (min-width: $screen-md) {
-          left: -200px;
+        @media screen and (min-width: $screen-sm) {
+          max-width: 70%;
+        }
+
+        h3 {
+          @extend .highlight;
+        }
+
+        p {
+          padding: 10px;
+          background: transparentize(#ffffff, 0.2);
         }
       }
 
-      &:nth-of-type(odd) {
-        text-align: right;
+      &:nth-of-type(even) {
+        margin-right: unset;
+
+        @media screen and (min-width: $screen-sm) {
+          margin-left: 50px;
+        }
+        @media screen and (min-width: $screen-md) {
+          margin-left: 100px;
+        }
+      }
+    }
+
+    .spotlight__item--graphic {
+      display: none;
+
+      @media screen and (min-width: $screen-sm) {
+        display: block;
+        height: 500px;
+        @include vertical-center-container;
+        background: $neutral-md no-repeat center center;
+        background-size: cover;
+        @include card-shadow;
 
         .graphic--offset {
-          left: unset;
-          right: -150px;
+          @include vertical-center-content;
+          left: -150px;
+          width: 300px;
+          height: 220px;
+          background: $color-secondary;
+          background: url('https://images.unsplash.com/photo-1513705138751-16c75b89180e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b77e138a5597fc315b366ce19872d358&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+          background-size: cover;
+          transform: translateZ(1px);
+          @include card-shadow;
 
           @media screen and (min-width: $screen-md) {
-            right: -200px;
+            left: -200px;
+          }
+        }
+
+        &:nth-of-type(odd) {
+          text-align: right;
+
+          .graphic--offset {
+            left: unset;
+            right: -150px;
+
+            @media screen and (min-width: $screen-md) {
+              right: -200px;
+            }
           }
         }
       }

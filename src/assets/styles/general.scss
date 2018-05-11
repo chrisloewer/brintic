@@ -12,6 +12,18 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
+p {
+  font-size: 12px;
+  line-height: 1.5em;
+
+  @media screen and (min-width: $screen-sm){
+    font-size: 14px;
+  }
+  @media screen and (min-width: $screen-md){
+    font-size: 18px;
+  }
+}
+
 h1 {
   font-size: 26px;
   text-transform: uppercase;

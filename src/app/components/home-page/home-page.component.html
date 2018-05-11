@@ -24,8 +24,7 @@
   <div class="spotlight">
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="design-spotlight" [ngClass]="isVisible('#design-spotlight') ? 'fade-in' : 'fade-out'">
-        <h3 class="highlight">{{getContent('spotlightOneTitle')}}</h3>
-        <div [innerHtml]="getContent('spotlightOneContent')"></div>
+        <div [innerHtml]="getContent('spotlightOne')"></div>
       </div>
     </div>
     <div class="spotlight__item spotlight__item--graphic"  [style.backgroundImage]="'url(/assets/images/wall.jpg)'">
@@ -38,16 +37,14 @@
     </div>
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="custom-spotlight" [ngClass]="isVisible('#custom-spotlight') ? 'fade-in' : 'fade-out'">
-        <h3 class="highlight">{{getContent('spotlightTwoTitle')}}</h3>
-        <div [innerHtml]="getContent('spotlightTwoContent')"></div>
+        <div [innerHtml]="getContent('spotlightTwo')"></div>
       </div>
     </div>
   </div>
   <div class="spotlight">
     <div class="spotlight__item spotlight__item--text">
       <div class="text--content" id="preview-spotlight" [ngClass]="isVisible('#preview-spotlight') ? 'fade-in' : 'fade-out'">
-        <h3 class="highlight">{{getContent('spotlightThreeTitle')}}</h3>
-        <div [innerHtml]="getContent('spotlightThreeContent')"></div>
+        <div [innerHtml]="getContent('spotlightThree')"></div>
       </div>
     </div>
     <div class="spotlight__item spotlight__item--graphic" [style.backgroundImage]="'url(/assets/images/polaroid-pictures.jpg)'">

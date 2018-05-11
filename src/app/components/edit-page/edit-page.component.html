@@ -1,7 +1,12 @@
 
 <div class="page-editor">
+
+  <!-- EDIT CARD -->
   <div class="page-editor__section page-editor--edit"  [class.open]="!previewActive">
-    <h3 class="center-text">Edit Page</h3>
+
+    <div class="loading-section" *ngIf="!loaded">
+      <div class="loading-section__icon"></div>
+    </div>
 
     <div class="control-buttons">
       <div class="button--expand" [class.active]="editActive" (click)="toggleEditMode()">
@@ -9,11 +14,8 @@
       </div>
     </div>
 
-    <div class="loading-section" *ngIf="!loaded">
-      <div class="loading-section__icon"></div>
-    </div>
-
-    <div class="container" *ngIf="loaded">
+    <div class="edit-container" *ngIf="loaded">
+      <h3 class="center-text">Edit Page</h3>
 
       <div *ngIf="post?.title">
         <label>Title</label>
@@ -40,11 +42,10 @@
         <button class="btn-default" (click)="setPost()">Save</button>
       </div>
 
-
-
     </div>
   </div>
 
+  <!-- PREVIEW CARD -->
   <div class="page-editor__section page-editor--preview" [class.open]="!editActive">
 
     <div class="loading-section" *ngIf="!loaded">
@@ -52,15 +53,15 @@
       <div class="loading-section__icon"></div>
     </div>
 
-    <div class="preview-container" [ngSwitch]="post?.postType" *ngIf="loaded">
-      <app-generic-page *ngSwitchCase="'default'" [(post)]="post"></app-generic-page>
-      <app-home-page  *ngSwitchCase="'home'" [(post)]="post"></app-home-page>
-    </div>
-
     <div class="control-buttons">
       <div class="button--expand" [class.active]="previewActive" (click)="togglePreviewMode()">
         <span class="graphic"></span>
       </div>
+    </div>
+
+    <div class="preview-container" [ngSwitch]="post?.postType" *ngIf="loaded">
+      <app-generic-page *ngSwitchCase="'default'" [(post)]="post"></app-generic-page>
+      <app-home-page  *ngSwitchCase="'home'" [(post)]="post"></app-home-page>
     </div>
   </div>
 

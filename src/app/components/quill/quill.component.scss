@@ -17,12 +17,13 @@
     }
 
     .ql-editor {
-      min-height: 300px;
+      min-height: 200px;
       font-family: 'Montserrat', sans-serif;
       font-size: 13px;
 
       p {
         margin-bottom: 15px;
+        font-size: unset;
       }
     }
 

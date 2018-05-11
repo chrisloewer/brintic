@@ -60,6 +60,14 @@
         }
       }
     }
+
+    .edit-container {
+      overflow-y: auto;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 20px 50px;
+    }
   }
 
   .page-editor--edit {
