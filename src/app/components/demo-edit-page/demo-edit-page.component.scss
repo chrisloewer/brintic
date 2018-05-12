@@ -1,0 +1,98 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.page-editor {
+  display: flex;
+  height: 100%;
+  overflow: visible;
+
+  .page-editor__section {
+    position: relative;
+    width: 0;
+    background: #ffffff;
+    @include card-shadow;
+    transition: all 0.4s;
+
+    // Hide elements if card isn't open - otherwise animations look bad
+    * {
+      opacity: 0;
+    }
+
+    // Toggle section is visible
+    &.open {
+      flex-grow: 1;
+      margin: 0;
+      transition: all 0.4s;
+      * {
+        opacity: 1;
+      }
+
+      & + .open {
+        margin-left: 20px;
+      }
+    }
+
+    .control-buttons {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      overflow: visible;
+      z-index: 5;
+
+      .button--expand {
+        display: inline-block;
+        padding: 15px;
+        border-radius: 50%;
+        background-color: $neutral-md;
+        @include card-shadow;
+        cursor: pointer;
+
+        .graphic {
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: url("/assets/images/expand-icon.svg") center center no-repeat;
+          background-size: contain;
+        }
+
+        &.active {
+          background-color: $color-highlight;
+        }
+      }
+    }
+
+    .edit-container {
+      overflow-y: auto;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 20px 50px;
+    }
+  }
+
+  .page-editor--edit {
+    &.open {
+      overflow-y: auto;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-weight: 600;
+    }
+  }
+
+  .page-editor--preview {
+    overflow: hidden;
+
+    .preview-container {
+      height: 100%;
+    }
+  }
+}
+
+.button-footer {
+  margin: 30px 0;
+  text-align: center;
+}
+

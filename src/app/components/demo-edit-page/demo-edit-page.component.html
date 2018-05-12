@@ -1,0 +1,65 @@
+
+<div class="page-editor">
+
+  <!-- EDIT CARD -->
+  <div class="page-editor__section page-editor--edit"  [class.open]="!previewActive">
+
+    <div class="loading-section" *ngIf="!loaded">
+      <div class="loading-section__icon"></div>
+    </div>
+
+    <div class="control-buttons">
+      <div class="button--expand" [class.active]="editActive" (click)="toggleEditMode()">
+        <span class="graphic"></span>
+      </div>
+    </div>
+
+    <div class="edit-container" *ngIf="loaded">
+      <h3 class="center-text">Edit Page</h3>
+
+      <div *ngIf="post?.title">
+        <label>Title</label>
+        <input type="text" title="Title" [(ngModel)]="post.title">
+      </div>
+
+
+      <div *ngFor="let contentBlock of post?.contentBlocks">
+        <div [ngSwitch]="contentBlock?.inputType">
+          <label for="{{contentBlock?.id}}">{{contentBlock?.displayName || contentBlock?.id}}</label>
+          <div *ngSwitchCase="'text'">
+            <input id="{{contentBlock?.id}}" title="{{contentBlock.id}}" type="text" [(ngModel)]="contentBlock.content">
+          </div>
+          <div *ngSwitchCase="'wysiwyg'">
+            <app-quill [(editorContent)]='contentBlock.content'></app-quill>
+          </div>
+          <div *ngSwitchCase="'image'">
+            <app-image-input [imagePath]="contentBlock.content" (imagePathEmitter)="setContent(contentBlock, $event)"></app-image-input>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PREVIEW CARD -->
+  <div class="page-editor__section page-editor--preview" [class.open]="!editActive">
+
+    <div class="loading-section" *ngIf="!loaded">
+      <div class="loading-section__icon"></div>
+    </div>
+
+    <div class="control-buttons">
+      <div class="button--expand" [class.active]="previewActive" (click)="togglePreviewMode()">
+        <span class="graphic"></span>
+      </div>
+    </div>
+
+    <div class="preview-container" [ngSwitch]="post?.postType" *ngIf="loaded">
+      <app-generic-page *ngSwitchCase="'default'" [(post)]="post"></app-generic-page>
+      <app-home-page  *ngSwitchCase="'home'" [(post)]="post"></app-home-page>
+      <app-features-page *ngSwitchCase="'feature'" [(post)]="post"></app-features-page>
+      <app-demo-page *ngSwitchCase="'demo'" [(post)]="post"></app-demo-page>
+    </div>
+  </div>
+
+</div>

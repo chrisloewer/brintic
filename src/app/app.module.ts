@@ -20,6 +20,7 @@ import { GalleryPageComponent } from './components/gallery-page/gallery-page.com
 import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.component';
 import { ImageInputComponent } from './components/image-input/image-input.component';
 import { DemoPageComponent } from './components/demo-page/demo-page.component';
+import { DemoEditPageComponent } from './components/demo-edit-page/demo-edit-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -28,7 +29,7 @@ const appRoutes: Routes = [
   { path: 'gallery', component: GalleryPageComponent },
   { path: 'modal', component: GalleryModalComponent },
   { path: 'features', component: FeaturesPageComponent },
-  { path: 'demo', component: DemoPageComponent },
+  { path: 'demo', component: DemoEditPageComponent },
   { path: 'edit',
     redirectTo: '/admin',
     pathMatch: 'full'
@@ -62,6 +63,7 @@ const appRoutes: Routes = [
     GalleryModalComponent,
     ImageInputComponent,
     DemoPageComponent,
+    DemoEditPageComponent,
   ],
   providers: [],
   bootstrap: [PageControlComponent]
