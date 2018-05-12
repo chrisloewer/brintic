@@ -1,0 +1,61 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+@import "./src/assets/styles/general";
+
+.get-started-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  overflow-y: auto;
+  @include card-shadow;
+}
+
+.header-splash {
+  height: 400px;
+  background: $neutral-md no-repeat center center;
+  background-size: cover;
+  @include box-shadow-lt;
+  @include vertical-center-container;
+
+  .header-splash__content {
+    @include vertical-center-content;
+  }
+}
+
+::ng-deep {
+  .text-blurb {
+    text-align: center;
+    margin: 140px 40px;
+    min-height: 100px;
+    overflow: hidden;
+
+    @media screen and (min-width: $screen-md) {
+      margin: 200px 40px;
+    }
+
+    .text-blurb__image {
+      display: inline-block;
+      height: 200px;
+      width: 400px;
+      margin-bottom: 30px;
+      background: no-repeat center center;
+      background-size: contain;
+
+      @media screen and (min-width: $screen-md) {
+        height: 400px;
+        width: 800px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .text-blurb__content {
+      max-width: 700px;
+      margin: 0 auto;
+
+      h3 {
+        @extend .highlight;
+      }
+    }
+  }
+}

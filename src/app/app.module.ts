@@ -21,6 +21,7 @@ import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.
 import { ImageInputComponent } from './components/image-input/image-input.component';
 import { DemoPageComponent } from './components/demo-page/demo-page.component';
 import { DemoEditPageComponent } from './components/demo-edit-page/demo-edit-page.component';
+import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'modal', component: GalleryModalComponent },
   { path: 'features', component: FeaturesPageComponent },
   { path: 'demo', component: DemoEditPageComponent },
+  { path: 'get-started', component: GetStartedPageComponent },
   { path: 'edit',
     redirectTo: '/admin',
     pathMatch: 'full'
@@ -64,6 +66,7 @@ const appRoutes: Routes = [
     ImageInputComponent,
     DemoPageComponent,
     DemoEditPageComponent,
+    GetStartedPageComponent,
   ],
   providers: [],
   bootstrap: [PageControlComponent]
