@@ -13,7 +13,7 @@
 
 .header-splash {
   height: 400px;
-  background: url("/assets/images/lamp-hangers.jpg") no-repeat center center;
+  background: $neutral-md no-repeat center center;
   background-size: cover;
   @include box-shadow-lt;
   @include vertical-center-container;

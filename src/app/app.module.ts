@@ -19,6 +19,7 @@ import { MaterialModule } from './modules/material.module';
 import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.component';
 import { ImageInputComponent } from './components/image-input/image-input.component';
+import { DemoPageComponent } from './components/demo-page/demo-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'gallery', component: GalleryPageComponent },
   { path: 'modal', component: GalleryModalComponent },
   { path: 'features', component: FeaturesPageComponent },
+  { path: 'demo', component: DemoPageComponent },
   { path: 'edit',
     redirectTo: '/admin',
     pathMatch: 'full'
@@ -59,6 +61,7 @@ const appRoutes: Routes = [
     GalleryPageComponent,
     GalleryModalComponent,
     ImageInputComponent,
+    DemoPageComponent,
   ],
   providers: [],
   bootstrap: [PageControlComponent]

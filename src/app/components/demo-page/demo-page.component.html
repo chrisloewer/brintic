@@ -1,0 +1,22 @@
+<div class="demo-container">
+
+  <div class="header-splash center-text"  [style.backgroundImage]="getUrl( getContent('imageSplash') )">
+    <div class="header-splash__content">
+      <h1>{{post?.title}}</h1>
+    </div>
+  </div>
+
+  <div class="text-blurb">
+    <div class="text-blurb__content" [innerHtml]="getContent('introText')">
+    </div>
+  </div>
+
+  <div class="image-divider" [style.backgroundImage]="getUrl( getContent('imageDivider') )"></div>
+
+  <div class="card-blurb">
+    <div class="card-blurb__content">
+      <div class="container" [innerHtml]="getContent('cardSection')"></div>
+    </div>
+  </div>
+
+</div>

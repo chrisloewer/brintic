@@ -3,12 +3,12 @@ import { PostService } from '../../services/post.service';
 import { Post } from '../../classes/post';
 
 @Component({
-  selector: 'app-features-page',
-  templateUrl: './features-page.component.html',
-  styleUrls: ['./features-page.component.scss'],
+  selector: 'app-demo-page',
+  templateUrl: './demo-page.component.html',
+  styleUrls: ['./demo-page.component.scss'],
   providers: [PostService]
 })
-export class FeaturesPageComponent implements OnInit {
+export class DemoPageComponent implements OnInit {
 
   @Input() post: Post;
 
@@ -24,7 +24,7 @@ export class FeaturesPageComponent implements OnInit {
   }
 
   getPost(): void {
-    this.postService.getPost('features')
+    this.postService.getPost('demo')
       .subscribe(
         (p) => this.post = p,
         (err) => console.warn(err)
