@@ -23,18 +23,24 @@
   }
 }
 
-.text-blurb {
-  text-align: center;
-  margin: 140px 40px;
-  min-height: 100px;
+::ng-deep {
+  .text-blurb {
+    text-align: center;
+    margin: 140px 40px;
+    min-height: 100px;
 
-  @media screen and (min-width: $screen-md) {
-    margin: 200px 40px;
-  }
+    @media screen and (min-width: $screen-md) {
+      margin: 200px 40px;
+    }
 
-  .text-blurb__content {
-    max-width: 700px;
-    margin: 0 auto;
+    .text-blurb__content {
+      max-width: 700px;
+      margin: 0 auto;
+
+      h3 {
+        @extend .highlight;
+      }
+    }
   }
 }
 
