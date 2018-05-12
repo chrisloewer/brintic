@@ -1,47 +1,37 @@
 <div class="main-container">
-  <div class="header-splash center-text">
+  <div class="header-splash center-text"  [style.backgroundImage]="getUrl( getContent('imageSplash') )">
     <div class="header-splash__content">
-      <h1>Features</h1>
+      <h1>{{post?.title}}</h1>
     </div>
   </div>
 
   <div class="feature-blurb">
-    <div class="feature-blurb__content">
-      <h3>Everything You Need</h3>
-      <p>Brintic has everything you need to power your website, and nothing that you don't.  Your website is a crucial part of your business, so keeping it up to date isn't optional.  Unfortunately this is sometimes harder than it sounds.  Brintic changes that.</p>
+    <div class="feature-blurb__content" [innerHtml]="getContent('introText')">
     </div>
   </div>
 
   <div class="feature-section">
-    <div class="feature__item feature__item--graphic" [style.backgroundImage]="'url(/assets/images/polaroid-pictures.jpg)'"></div>
+    <div class="feature__item feature__item--graphic" [style.backgroundImage]="getUrl( getContent('imageOne') )"></div>
     <div class="feature__item feature__item--text">
-      <div class="text--content">
-        <h3 class="highlight">Live Preview</h3>
-        <p>The Brintic admin panel allows users to preview their changes as they type.  This lets users view exactly what their changes will look like before they publish them for the world to see.</p>
+      <div class="text--content"  [innerHtml]="getContent('sectionOne')">
       </div>
     </div>
 
-    <div class="feature__item feature__item--graphic" [style.backgroundImage]="'url(/assets/images/wall.jpg)'"></div>
+    <div class="feature__item feature__item--graphic" [style.backgroundImage]="getUrl( getContent('imageTwo') )"></div>
     <div class="feature__item feature__item--text">
-      <div class="text--content">
-        <h3 class="highlight">Open Source</h3>
-        <p>Brintic as a platform is free to use.  Our source code is fully open source if you want to manage your website yourself.  The only thing we charge for is if you want us to set up and manage your site for you.  Then are are happy to work with you to come up with a fair quote.</p>
+      <div class="text--content"  [innerHtml]="getContent('sectionTwo')">
       </div>
     </div>
-    <div class="feature__item feature__item--graphic" [style.backgroundImage]="'url(/assets/images/textiles.jpg)'"></div>
+    <div class="feature__item feature__item--graphic" [style.backgroundImage]="getUrl( getContent('imageThree') )"></div>
     <div class="feature__item feature__item--text">
-      <div class="text--content">
-        <h3 class="highlight">Custom Features</h3>
-        <p>If Brintic does not fully meet all of your needs fresh out of the box, the team is happy to work with you to come up with a solution that does.  Custom features are available upon request.</p>
+      <div class="text--content"  [innerHtml]="getContent('sectionThree')">
       </div>
     </div>
-    <div class="feature__item feature__item--graphic" [style.backgroundImage]="'url(/assets/images/wall.jpg)'"></div>
+    <div class="feature__item feature__item--graphic" [style.backgroundImage]="getUrl( getContent('imageFour') )"></div>
   </div>
 
   <div class="feature-blurb">
-    <div class="feature-blurb__content">
-      <h3>Try It Out</h3>
-      <p>Still on the fence on whether Brintic is the solution for you?  See how easy it can be.  Try out our live demo.  This demo works just like the actual product.  Take it for a spin.</p>
+    <div class="feature-blurb__content"  [innerHtml]="getContent('outroText')">
       <button class="button--action light">Live Demo</button>
     </div>
   </div>

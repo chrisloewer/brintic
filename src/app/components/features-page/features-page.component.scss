@@ -1,5 +1,6 @@
 @import "./src/assets/styles/utilities/variables";
 @import "./src/assets/styles/utilities/mixins";
+@import "./src/assets/styles/general";
 
 .main-container {
   position: relative;
@@ -36,33 +37,41 @@
   }
 }
 
-.feature-section {
+// Content is pulled from DB.
+// It needs styles to not be component specific because the DB content will not have the component scoping tags
+::ng-deep {
+  .feature-section {
 
-  .feature__item {
-    min-height: 300px;
-
-    @media screen and (min-width: $screen-md) {
-      min-height: 500px;
-    }
-
-    &.feature__item--graphic {
-      background: fixed no-repeat center center;
-      background-size: cover;
-      display: none;
+    .feature__item {
+      min-height: 300px;
 
       @media screen and (min-width: $screen-md) {
-        display: block;
-        @include inset-shadow;
+        min-height: 500px;
       }
-    }
-    &.feature__item--text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 60px;
 
-      .text--content {
-        max-width: 700px;
+      &.feature__item--graphic {
+        background: fixed no-repeat center center;
+        background-size: cover;
+        display: none;
+
+        @media screen and (min-width: $screen-md) {
+          display: block;
+          @include inset-shadow;
+        }
+      }
+      &.feature__item--text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 60px;
+
+        .text--content {
+          max-width: 700px;
+
+          h3 {
+            @extend .highlight;
+          }
+        }
       }
     }
   }

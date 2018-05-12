@@ -61,6 +61,7 @@
     <div class="preview-container" [ngSwitch]="post?.postType" *ngIf="loaded">
       <app-generic-page *ngSwitchCase="'default'" [(post)]="post"></app-generic-page>
       <app-home-page  *ngSwitchCase="'home'" [(post)]="post"></app-home-page>
+      <app-features-page *ngSwitchCase="'feature'" [(post)]="post"></app-features-page>
     </div>
   </div>
 
