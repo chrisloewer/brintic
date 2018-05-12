@@ -54,15 +54,15 @@
 
   <div class="col-container">
     <div class="col-container__item">
-      <div class="graphic"></div>
+      <div class="graphic" [style.backgroundImage]="getUrl( getContent('itemOne__image') )"></div>
       <div [innerHtml]="getContent('itemOneContent')"></div>
     </div>
     <div class="col-container__item">
-      <div class="graphic"></div>
+      <div class="graphic" [style.backgroundImage]="getUrl( getContent('itemTwo__image') )"></div>
       <div [innerHtml]="getContent('itemTwoContent')"></div>
     </div>
     <div class="col-container__item">
-      <div class="graphic"></div>
+      <div class="graphic" [style.backgroundImage]="getUrl( getContent('itemThree__image') )"></div>
       <div [innerHtml]="getContent('itemThreeContent')"></div>
     </div>
   </div>
