@@ -12,17 +12,17 @@
   </div>
 
   <div class="text-blurb">
-    <div class="text-blurb__image" [style.backgroundImage]="getUrl( getContent('sectionOneImage') )"></div>
+    <img class="text-blurb__image" [src]="getContent('sectionOneImage')">
     <div class="text-blurb__content" [innerHtml]="getContent('sectionOneContent')"></div>
   </div>
 
   <div class="text-blurb">
-    <div class="text-blurb__image"  [style.backgroundImage]="getUrl( getContent('sectionTwoImage') )"></div>
+    <img class="text-blurb__image" [src]="getContent('sectionTwoImage')">
     <div class="text-blurb__content" [innerHtml]="getContent('sectionTwoContent')"></div>
   </div>
 
   <div class="text-blurb">
-    <div class="text-blurb__image"  [style.backgroundImage]="getUrl( getContent('sectionThreeImage') )"></div>
+    <img class="text-blurb__image" [src]="getContent('sectionThreeImage')">
     <div class="text-blurb__content" [innerHtml]="getContent('sectionThreeContent')"></div>
   </div>
 

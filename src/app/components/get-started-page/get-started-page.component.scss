@@ -28,7 +28,6 @@
     text-align: center;
     margin: 140px 40px;
     min-height: 100px;
-    overflow: hidden;
 
     @media screen and (min-width: $screen-md) {
       margin: 200px 40px;
@@ -36,16 +35,15 @@
 
     .text-blurb__image {
       display: inline-block;
-      height: 200px;
       width: 400px;
+      height: auto;
       margin-bottom: 30px;
       background: no-repeat center center;
       background-size: contain;
+      @include card-shadow;
 
       @media screen and (min-width: $screen-md) {
-        height: 400px;
-        width: 800px;
-        margin-bottom: 50px;
+        width: 600px;
       }
     }
 
