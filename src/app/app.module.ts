@@ -22,6 +22,7 @@ import { ImageInputComponent } from './components/image-input/image-input.compon
 import { DemoPageComponent } from './components/demo-page/demo-page.component';
 import { DemoEditPageComponent } from './components/demo-edit-page/demo-edit-page.component';
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
+import { ImageModalComponent } from './components/image-modal/image-modal.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -67,6 +68,7 @@ const appRoutes: Routes = [
     DemoPageComponent,
     DemoEditPageComponent,
     GetStartedPageComponent,
+    ImageModalComponent,
   ],
   providers: [],
   bootstrap: [PageControlComponent]

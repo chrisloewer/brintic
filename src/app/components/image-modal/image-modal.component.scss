@@ -1,0 +1,13 @@
+@import "./src/assets/styles/utilities/variables";
+@import "./src/assets/styles/utilities/mixins";
+
+.image-modal {
+  width: 100%;
+  background: #ffffff;
+  padding: 0;
+
+  .image-modal__image {
+    height: calc(90vh - 250px);
+    max-width: 100%;
+  }
+}

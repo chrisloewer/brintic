@@ -6,10 +6,6 @@
     </div>
   </div>
 
-  <div class="loading-section" *ngIf="loading">
-    <div class="loading-section__icon"></div>
-  </div>
-
   <form class="file-upload" (submit)="uploadImage()" *ngIf="loggedIn">
     <div *ngIf="fileDataUri">
       <input class="button--action light" type="submit" value="UPLOAD">
@@ -26,9 +22,13 @@
     </div>
   </form>
 
+  <div class="loading-section" *ngIf="loading">
+    <div class="loading-section__icon"></div>
+  </div>
+
   <div class="gallery">
     <div class="gallery__item"  *ngFor="let img of images">
-      <div class="image" [style.backgroundImage]="'url(' + img.src + ')'"></div>
+      <div class="image" [style.backgroundImage]="'url(' + img.src + ')'" (click)="showModal(img.src)"></div>
       <label class="delete" *ngIf="loggedIn" (click)="deleteImage(img.name)">Delete</label>
     </div>
   </div>

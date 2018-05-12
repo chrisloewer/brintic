@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { Image } from '../../classes/image';
-import { MatSnackBar } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { MatSnackBarComponent } from '../mat-snack-bar/mat-snack-bar.component';
 import { AuthService } from '../../services/auth.service';
+import { ImageModalComponent } from '../image-modal/image-modal.component';
 
 @Component({
   selector: 'app-gallery-page',
@@ -27,7 +28,8 @@ export class GalleryPageComponent implements OnInit {
 
   constructor(
     private postService: PostService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit() {
@@ -102,6 +104,14 @@ export class GalleryPageComponent implements OnInit {
 
   validateFile(file): boolean {
     return this.acceptedMimeTypes.includes(file.type) && file.size < 500000;
+  }
+
+  showModal(imgSrc: string): void {
+    console.log(imgSrc);
+    this.dialog.open(ImageModalComponent, {
+      maxHeight: '90vh',
+      data: imgSrc
+    });
   }
 
 

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MatDialogModule, MatSnackBarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarComponent } from '../components/mat-snack-bar/mat-snack-bar.component';
+import { ImageModalComponent } from '../components/image-modal/image-modal.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { MatSnackBarComponent } from '../components/mat-snack-bar/mat-snack-bar.
     MatSnackBarComponent
   ],
   entryComponents: [
-    MatSnackBarComponent
+    MatSnackBarComponent,
+    ImageModalComponent
   ]
 })
 export class MaterialModule {}
