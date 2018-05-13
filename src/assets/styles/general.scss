@@ -105,10 +105,11 @@ label {
   width: unset;
   padding: 10px 30px;
   margin: 0 auto;
-  background: $neutral-lt;
-  border-radius: 15px;
   border: 1px solid $color-primary;
+  border-radius: 5px;
+  background: $neutral-lt;
   color: $color-primary;
+  font-weight: 800;
   transition: all 0.2s;
   cursor: pointer;
 
@@ -121,31 +122,20 @@ label {
     background: $color-highlight;
   }
 }
+.btn-primary {
+  @extend .btn-default;
 
-.center-text {
-  text-align: center;
-}
-
-.container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.container-narrow {
-  width: 70%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 .button--action {
+  display: inline-block;
   padding: 20px 30px;
   border: 1px solid $color-highlight;
   border-radius: 50px;
   color: $color-highlight;
   outline: none;
   transition: all 0.2s;
+  text-decoration: none;
 
   &:hover {
     background: $color-highlight;
@@ -153,6 +143,9 @@ label {
     color: $color-primary;
     cursor: pointer;
     transition: all 0.2s;
+  }
+  &:active {
+    background: darken($color-highlight, 5%);
   }
 
   &.dark {
@@ -172,8 +165,29 @@ label {
     &:hover {
       background: $color-highlight;
     }
+    &:active {
+      background: darken($color-highlight, 5%);
+    }
   }
 }
+
+
+.center-text {
+  text-align: center;
+}
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container-narrow {
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 
 
 .loading-section {

@@ -81,27 +81,33 @@
       }
 
       .demo {
-        background: $color-primary;
-        padding: 80px 0;
-        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 280px;
+        background: $color-primary no-repeat center center;
+        background-size: cover;
         text-align: center;
+        @include card-shadow;
 
         @media screen and (min-width: $screen-md) {
-          padding: 150px;
+          height: 380px;
         }
 
         .demo__link {
           max-width: 180px;
           padding: 20px 30px;
           margin: 0 auto;
-          border: 1px solid $color-highlight;
           border-radius: 50px;
+          border: 1px solid $color-primary;
+          background: $color-primary;
           color: $color-highlight;
+          text-decoration: none;
           transition: all 0.2s;
 
           &:hover {
-            background: $color-highlight;
-            color: $color-primary;
+            border-color: $color-highlight;
             cursor: pointer;
             transition: all 0.2s;
           }

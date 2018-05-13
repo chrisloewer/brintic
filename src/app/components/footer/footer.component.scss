@@ -12,9 +12,14 @@
     margin: 20px 0;
   }
 
-  a {
-    color: $color-highlight;
+  a:not(.button--action) {
     margin: 20px;
+    color: $color-highlight;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .button--action {

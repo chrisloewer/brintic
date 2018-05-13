@@ -12,10 +12,8 @@
       <div class="container">
         <div [innerHtml]="getContent('introBlurb')"></div>
 
-        <div class="demo">
-          <div class="demo__link">
-            Live Demo
-          </div>
+        <div class="demo" [style.backgroundImage]="getUrl( getContent('demoImage') )">
+          <a href="/demo" class="demo__link">Live Demo</a>
         </div>
       </div>
     </div>
