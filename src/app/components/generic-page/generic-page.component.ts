@@ -33,6 +33,14 @@ export class GenericPageComponent implements OnInit {
     this.postService.getPost(this.pageId)
       .subscribe(
         (p) => this.post = p,
+        () => this.getErrorPost()
+      );
+  }
+
+  getErrorPost(): void {
+    this.postService.getPost('error')
+      .subscribe(
+        (p) => this.post = p,
         (err) => console.warn(err)
       );
   }
