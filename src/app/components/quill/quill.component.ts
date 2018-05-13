@@ -10,9 +10,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class QuillComponent implements OnInit {
 
-  @Input() editorContent: String;
+  @Input() editorContent: string;
 
-  @Output() editorContentChange: EventEmitter<String> = new EventEmitter<String>();
+  @Output() editorContentChange: EventEmitter<string> = new EventEmitter<string>();
 
   options = {
     toolbar: [

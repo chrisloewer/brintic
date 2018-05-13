@@ -31,7 +31,7 @@ export class DemoPageComponent implements OnInit {
       );
   }
 
-  getContent(contentBlockId): String {
+  getContent(contentBlockId): string {
     try {
       return this.post.contentBlocks.filter(function (block) {
         return block.id === contentBlockId;
