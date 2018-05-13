@@ -17,10 +17,16 @@
 
 .pages {
   .pages__well {
-    margin: 20px 0;
-    padding: 20px;
+    display: block;
+    margin: 20px;
+    padding: 15px 20px;
     background: $neutral-lt;
     border: 1px solid $color-stroke;
     cursor: pointer;
   }
+}
+
+.logout-text {
+  text-align: center;
+  margin: 30px 0;
 }
