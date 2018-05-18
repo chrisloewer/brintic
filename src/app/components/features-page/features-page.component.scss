@@ -58,6 +58,9 @@
           display: block;
           @include inset-shadow;
         }
+        @media screen and (min-width: $screen-md) and (min-resolution: 2dppx) {
+          background-attachment: unset;
+        }
       }
       &.feature__item--text {
         display: flex;

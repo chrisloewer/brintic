@@ -270,6 +270,9 @@
     background-size: cover;
     @include inset-shadow;
   }
+  @media screen and (min-width: $screen-md) and (min-resolution: 2dppx) {
+    background-attachment: unset;
+  }
 }
 
 .get-started {

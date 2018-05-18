@@ -53,6 +53,9 @@
   @media screen and (min-width: $screen-md) {
     height: 500px;
   }
+  @media screen and (min-width: $screen-md) and (min-resolution: 2dppx) {
+    background-attachment: unset;
+  }
 }
 
 
