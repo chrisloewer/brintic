@@ -13,6 +13,10 @@
     @include card-shadow;
     transition: all 0.4s;
 
+    @media (min-resolution: 2dppx) {
+      transition: none;
+    }
+
     // Hide elements if card isn't open - otherwise animations look bad
     * {
       opacity: 0;
@@ -23,6 +27,11 @@
       flex-grow: 1;
       margin: 0;
       transition: all 0.4s;
+
+      @media (min-resolution: 2dppx) {
+        transition: none;
+      }
+
       * {
         opacity: 1;
       }
