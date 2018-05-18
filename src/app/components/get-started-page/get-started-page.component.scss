@@ -36,9 +36,10 @@
     .text-blurb__image {
       display: inline-block;
       width: 400px;
+      max-width: 100%;
       height: auto;
       margin-bottom: 30px;
-      background: no-repeat center center;
+      background:  $neutral-md no-repeat center center;
       background-size: contain;
       @include card-shadow;
 
